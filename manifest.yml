@@ -1,10 +1,11 @@
 ---
 applications:
-- name: Hello Watson
+- name: Sonny the Weather Bot
   command: npm start
   services:
   - SpeechToText
   - TextToSpeech
   - WatsonConversation
+#  - AlchemyAPI
   env:
     NPM_CONFIG_PRODUCTION: false

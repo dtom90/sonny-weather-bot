@@ -16,19 +16,19 @@
 
 'use strict';
 
-// TODO create alternative to read from VCAP services file
 require('dotenv').config({silent: true});
 var express = require('express');
-var extend = require('util')._extend;
 var compression = require('compression');
-var bodyParser = require('body-parser');  // parser for post requests
-var watson = require('watson-developer-cloud');
 //The following requires are needed for logging purposes
 var uuid = require('uuid');
 var csv = require('express-csv');
-var vcapServices = require('vcap_services');
+var bodyParser = require('body-parser');  // parser for post requests
+
+var watson = require('watson-developer-cloud'),
+  vcapServices = require('vcap_services'),
+  extend = require('util')._extend;
+
 var basicAuth = require('basic-auth-connect');
-var fulfillment = require('./fulfillment');
 
 //The app owner may optionally configure a cloudand db to track user input.
 //This cloudand db is not required, the app will operate without it.
@@ -42,6 +42,7 @@ if (cloudantCredentials) {
 cloudantUrl = cloudantUrl || process.env.CLOUDANT_URL; // || '<cloudant_url>';
 
 var logs = null;
+var DEBUG = true;
 
 var app = express();
 
@@ -50,31 +51,36 @@ app.use(bodyParser.json());
 //static folder containing UI
 app.use(express.static(__dirname + "/dist"));
 
-// Create the service wrapper
-var conversationConfig = extend({
+var alchemy = require('./alchemy'),
+  context_manager = require('./lib/context_manager'),
+  fulfillment = require('./lib/fulfillment');
+
+var conversation = watson.conversation(extend({
   username: process.env.CONVERSATION_USERNAME || '<username>',
   password: process.env.CONVERSATION_PASSWORD || '<password>',
   version_date: '2016-09-20',
   version: 'v1'
-}, vcapServices.getCredentials('conversation'));
-var conversation = watson.conversation(conversationConfig);
+}, vcapServices.getCredentials('conversation')));
 
-//The conversation workspace id
+// The conversation workspace id
 var workspace_id = process.env.WORKSPACE_ID || null;
 
 // Endpoint to be call from the client side
-app.post('/api/message', function (req, res) {
+app.post('/api/message', function(req, res) {
+
+  if (DEBUG) console.log("\nHandling Message...");
+
+  //If the workspace id is not specified notify the user
   if (!workspace_id) {
-    //If the workspace id is not specified notify the user
     return res.json({
       'output': {
         'text': 'The app has not been configured with a <b>WORKSPACE_ID</b> environment variable. Please refer to the ' +
-        '<a href="https://github.com/watson-developer-cloud/car-dashboard">README</a> documentation on how to set this variable. <br>' +
-        'Once a workspace has been defined the intents may be imported from ' +
-        '<a href="https://github.com/watson-developer-cloud/car-dashboard/blob/master/training/car_workspace.json">here</a> in order to get a working application.'
+        '<a href="https://github.com/watson-developer-cloud/car-dashboard">README</a> documentation on how to set this variable. <br>'
       }
     });
   }
+
+  // Set up the payload
   var payload = {
     workspace_id: workspace_id,
     context: {}
@@ -88,22 +94,53 @@ app.post('/api/message', function (req, res) {
       payload.context = req.body.context;
     }
   }
-  // Send the input to the conversation service
-  conversation.message(payload, function (err, data) {
-    if (err) {
-      console.error(JSON.stringify(err));
-      return res.status(err.code || 500).json(err);
-    }
-    if (logs) {
-      //If the logs db is set, then we want to record all input and responses
-      var id = uuid.v4();
-      logs.insert({'_id': id, 'request': payload, 'response': data, 'time': new Date()}, function (err, data) {
-      });
-    }
-    fulfillment.handle_message(res, data);
-  });
-});
 
+  if (DEBUG) {
+    console.log("\nInitial Payload:");
+    console.log(payload);
+  }
+
+  //TODO: make this a waterfall
+  alchemy.extract_entities(payload, function(extracted) {
+
+    if (DEBUG) {
+      console.log("\nEntities Extracted by AlchemyLanguage:");
+      console.log(extracted);
+    }
+
+    context_manager.update_context(payload, extracted, function(payload) {
+
+      if (DEBUG) {
+        console.log("\nWatson Conversation Payload:");
+        console.log(payload);
+      }
+
+      // Send the input to the conversation service
+      conversation.message(payload, function(err, data) {
+
+        if (err) {
+          console.error('\nWatson Conversation Service Error:');
+          console.error(err);
+
+        } else {
+
+          if (DEBUG) {
+            console.log('\nWatson Conversation Output:');
+            console.log(data);
+          }
+
+          fulfillment.handle_message(data, function(err, result) {
+            if (err) {
+              console.error('\nFulfillment Error:');
+              console.error(err);
+            } else
+              return res.json(result);
+          });
+        }
+      });
+    });
+  })
+});
 
 if (cloudantUrl) {
   //If logging has been enabled (as signalled by the presence of the cloudantUrl) then the
@@ -116,9 +153,9 @@ if (cloudantUrl) {
   //If the cloudantUrl has been configured then we will want to set up a nano client
   var nano = require('nano')(cloudantUrl);
   //add a new API which allows us to retrieve the logs (note this is not secure)
-  nano.db.get('car_logs', function (err, body) {
+  nano.db.get('car_logs', function(err, body) {
     if (err) {
-      nano.db.create('car_logs', function (err, body) {
+      nano.db.create('car_logs', function(err, body) {
         logs = nano.db.use('car_logs');
       });
     } else {
@@ -127,9 +164,9 @@ if (cloudantUrl) {
   });
 
   //Endpoint which allows deletion of db
-  app.post('/clearDb', auth, function (req, res) {
-    nano.db.destroy('car_logs', function () {
-      nano.db.create('car_logs', function () {
+  app.post('/clearDb', auth, function(req, res) {
+    nano.db.destroy('car_logs', function() {
+      nano.db.create('car_logs', function() {
         logs = nano.db.use('car_logs');
       });
     });
@@ -137,8 +174,8 @@ if (cloudantUrl) {
   });
 
   //Endpoint which allows conversation logs to be fetched
-  app.get('/chats', auth, function (req, res) {
-    logs.view('chats_view', 'chats_view', function (err, body) {
+  app.get('/chats', auth, function(req, res) {
+    logs.view('chats_view', 'chats_view', function(err, body) {
       if (err) {
         console.error(err);
         return res;
@@ -146,7 +183,7 @@ if (cloudantUrl) {
       //download as CSV
       var csv = [];
       csv.push(['Question', 'Intent', 'Confidence', 'Entity', 'Output', 'Time']);
-      body.rows.sort(function (a, b) {
+      body.rows.sort(function(a, b) {
         if (a && b && a.value && b.value) {
           var date1 = new Date(a.value[5]);
           var date2 = new Date(b.value[5]);
@@ -154,7 +191,7 @@ if (cloudantUrl) {
           return aGreaterThanB ? 1 : ((date1.getTime() === date2.getTime()) ? 0 : -1);
         }
       });
-      body.rows.forEach(function (row) {
+      body.rows.forEach(function(row) {
         var question = '';
         var intent = '';
         var confidence = 0;

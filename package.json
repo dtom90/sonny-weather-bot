@@ -22,12 +22,14 @@
     "express-csv": "0.6.0",
     "mocha": "^2.5.3",
     "nano": "*",
+    "node-pipeline": "^1.0.2",
     "python-shell": "^0.4.0",
     "request": "^2.72.0",
     "uuid": "2.0.2",
     "vcap_services": "^0.2.0",
     "watson-developer-cloud": "^2.8.1",
-    "watson-speech": "^0.19.1"
+    "watson-speech": "^0.19.1",
+    "async": "latest"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
