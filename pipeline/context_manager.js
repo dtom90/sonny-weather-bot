@@ -18,11 +18,49 @@
 
 var DEBUG = false;
 
+var entity_types = {
+  'City': 'city',
+  'Person': 'city',
+  'StateOrCounty': 'state'
+};
+
 module.exports = {
 
-  update_context: function(payload, callback) {
+  update_context: function(payload, extracted, callback) {
 
-    // Update the payload.context with whatever changes are required
+    if (extracted.dates && extracted.dates.length > 0) {  // if we found at least one date,
+      if (DEBUG) console.log(extracted.dates);
+      var date = extracted.dates[0].date.substring(0, 8);  // extract only the date
+      payload.context.date = date.substring(0, 4) + '-' + date.substring(4, 6) + '-' + date.substring(6, 8); // add in the dashes
+    }
+
+    var new_entities = {};
+    for (var i in extracted.entities) {
+      var entity = extracted.entities[i];
+      if (entity.type in entity_types && !(entity_types[entity.type] in new_entities))
+        new_entities[entity_types[entity.type]] = entity.text;
+    }
+
+    // if we switched cities, clear the state.
+    if (payload.context.state && new_entities.city != payload.context.city)
+      payload.context.state = null;
+
+    // if we switched states, clear the city.
+    if (payload.context.city && !payload.context.asked_state && new_entities.state != payload.context.state)
+      payload.context.city = null;
+
+    if (new_entities.state) {
+      payload.context.state = new_entities.state;
+      if (new_entities.city) {
+        payload.context.city = new_entities.city;
+      }
+    } else if (new_entities.city) {
+      payload.context.city = new_entities.city;
+    }
+    if (payload.context.asked_state)
+      payload.context.asked_state = false;
+
+    // TODO: payload.alchemy_entities = extracted;
 
     if (DEBUG) {
       console.log("\nNew Context:");

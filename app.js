@@ -32,14 +32,17 @@ var uuid = require('uuid'),
   basicAuth = require('basic-auth-connect');
 
 // local module requires
-var fulfillment = require('./fulfillment'),
-  context_manager = require('./pipeline/context_manager');
+var alchemy = require('./pipeline/alchemy'),
+  context_manager = require('./pipeline/context_manager'),
+  fulfillment = require('./pipeline/fulfillment');
 
 // load from .env file
 require('dotenv').config({silent: true});
 
 // load from (default).json file
 if(config.has('VCAP_SERVICES')) process.env['VCAP_SERVICES'] = JSON.stringify(config.get('VCAP_SERVICES'));
+
+var DEBUG = process.env.DEBUG || false;
 
 //The app owner may optionally configure a cloudand db to track user input.
 //This cloudand db is not required, the app will operate without it.
@@ -104,26 +107,51 @@ app.post('/api/message', function (req, res) {
     }
   }
 
-  // Update the context before sending payload to the Watson Conversation service
-  context_manager.update_context(payload, function(new_payload) {
+  if (DEBUG) {
+    console.log("\nInitial Payload:");
+    console.log(payload);
+  }
 
-    // Send the input to the conversation service
-    conversation.message(new_payload, function (err, data) {
-      if (err) {
-        console.error('conversation.message error: '+JSON.stringify(err));
-        return res.status(err.code || 500).json(err);
+  //TODO: make this a waterfall
+  alchemy.extract_entities(payload, function(extracted) {
+
+    if (DEBUG) {
+      console.log("\nEntities Extracted by AlchemyLanguage:");
+      console.log(extracted);
+    }
+
+    context_manager.update_context(payload, extracted, function(payload) {
+
+      if (DEBUG) {
+        console.log("\nWatson Conversation Payload:");
+        console.log(payload);
       }
-      if (logs) {
-        //If the logs db is set, then we want to record all input and responses
-        var id = uuid.v4();
-        logs.insert({'_id': id, 'request': new_payload, 'response': data, 'time': new Date()}, function (err, data) {
-        });
-      }
-      fulfillment.handle_message(res, data);
+
+      // Send the input to the conversation service
+      conversation.message(payload, function(err, data) {
+
+        if (err) {
+          console.error('\nWatson Conversation Service Error:');
+          console.error(err);
+
+        } else {
+
+          if (DEBUG) {
+            console.log('\nWatson Conversation Output:');
+            console.log(data);
+          }
+
+          fulfillment.handle_message(data, function(err, result) {
+            if (err) {
+              console.error('\nFulfillment Error:');
+              console.error(err);
+            } else
+              return res.json(result);
+          });
+        }
+      });
     });
-
   });
-
 });
 
 app.use('/api/speech-to-text/', require('./speech/stt-token.js'));

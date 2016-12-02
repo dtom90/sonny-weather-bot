@@ -28,7 +28,8 @@
     "uuid": "2.0.2",
     "vcap_services": "^0.2.0",
     "watson-developer-cloud": "^2.8.1",
-    "watson-speech": "^0.19.1"
+    "watson-speech": "^0.19.1",
+    "async": "latest"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
