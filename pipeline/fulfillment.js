@@ -29,7 +29,7 @@ exports.handle_message = function(data, next) {
 
   // then make a weather request using the JSON data, and get the response text, speech, and images to display
     makeWeatherRequest(data, function(responseText, responseSpeech, image_url) {
-      // if(DEBUG) console.log(responseText);
+      if(DEBUG) console.log(responseText);
 
       /**
        * We can display multiple separate text lines in the app,
@@ -46,6 +46,8 @@ exports.handle_message = function(data, next) {
       if (data.output.speech instanceof Array) data.output.speech = data.output.speech.join('. ');
 
       if(image_url) data.output.image = image_url;
+
+      if(DEBUG) console.log(data);
 
       next(null, data); // respond with the JSON data
     });

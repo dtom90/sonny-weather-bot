@@ -24,6 +24,13 @@ var entity_types = {
   'StateOrCounty': 'state'
 };
 
+var city_abbrevs = {
+  'LA': 'Los Angeles',
+  'NYC': 'New York City',
+  'VEGAS': 'Las Vegas',
+  'DC': 'Washington'
+};
+
 module.exports = {
 
   update_context: function(payload, extracted, callback) {
@@ -61,6 +68,10 @@ module.exports = {
       payload.context.asked_state = false;
 
     // TODO: payload.alchemy_entities = extracted;
+
+    if(payload.context.city && payload.context.city.toUpperCase() in city_abbrevs){
+      payload.context.city = city_abbrevs[payload.context.city.toUpperCase()];
+    }
 
     if (DEBUG) {
       console.log("\nNew Context:");

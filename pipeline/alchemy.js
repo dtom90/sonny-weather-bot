@@ -52,7 +52,7 @@ exports.extract_entities = function(payload, finish){
   // TODO: make this parallel
   // Begin the waterfall
   async.waterfall(current_pipeline, function(err, text, extracted) {
-    if (err) console.log(err);
+    if (err) console.err(err);
     finish(extracted);
   });
 };
@@ -72,7 +72,7 @@ function extract_dates(text, extracted, next) {
     // Call AlchemyLanguage API Date Extractor
     alchemy_language.dates(parameters, function(err, response) {
       if (err) {
-        console.log('\nAlchemy Language Date Extractor Error:');
+        console.err('\nAlchemy Language Date Extractor Error:');
         next(err);
       }
       else {
@@ -90,11 +90,12 @@ function extract_entities(text, extracted, next) {
   if (text) {
     alchemy_language.entities({text: text}, function(err, response) {
       if (err) {
-        console.log('\nAlchemy Language Entity Extractor Error:');
+        console.err('\nAlchemy Language Entity Extractor Error:');
         next(err);
       }
       else {
         extracted.entities = response.entities;
+        if(DEBUG) console.log(extracted);
         next(null, text, extracted);
       }
     });
