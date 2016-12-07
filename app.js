@@ -17,6 +17,9 @@
 'use strict';
 process.env.SUPPRESS_NO_CONFIG_WARNING = true;
 
+// load from .env file
+require('dotenv').config({silent: true});
+
 // library requires
 var express = require('express'),
   extend = require('util')._extend,
@@ -25,6 +28,9 @@ var express = require('express'),
   compression = require('compression'),
   bodyParser = require('body-parser'),  // parser for post requests
   watson = require('watson-developer-cloud');
+
+// load from (default).json file
+if(config.has('VCAP_SERVICES')) process.env['VCAP_SERVICES'] = JSON.stringify(config.get('VCAP_SERVICES'));
 
 //The following requires are needed for logging purposes
 var uuid = require('uuid'),
@@ -35,12 +41,6 @@ var uuid = require('uuid'),
 var alchemy = require('./pipeline/alchemy'),
   context_manager = require('./pipeline/context_manager'),
   fulfillment = require('./pipeline/fulfillment');
-
-// load from .env file
-require('dotenv').config({silent: true});
-
-// load from (default).json file
-if(config.has('VCAP_SERVICES')) process.env['VCAP_SERVICES'] = JSON.stringify(config.get('VCAP_SERVICES'));
 
 var DEBUG = process.env.DEBUG || false;
 
