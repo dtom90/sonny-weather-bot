@@ -18,7 +18,7 @@
 
 var exports = module.exports = {};
 
-var weatherUtil = require('./weatherUtil'); // Require the Weather Underground Util
+var weatherUtil = require('./../lib/weatherUtil'); // Require the Weather Underground Util
 var WU_API_KEY = process.env.WEATHER_UNDERGROUND_API_KEY || null; // Get Weather Underground API key from the .env file
 var DEBUG = false;
 var DEBUG_UTIL = false;
