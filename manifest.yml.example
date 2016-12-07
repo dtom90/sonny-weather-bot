@@ -1,11 +1,11 @@
 ---
 applications:
-- name: Sonny the Weather Bot
+- name: Hello Watson
+  memory: 128m
   command: npm start
   services:
   - SpeechToText
   - TextToSpeech
   - WatsonConversation
-#  - AlchemyAPI
   env:
     NPM_CONFIG_PRODUCTION: false

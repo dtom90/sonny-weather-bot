@@ -1,6 +1,9 @@
-dist/
 node_modules/
+dist/
 .idea/
-coverage
+temp/
 npm-debug.log
-.env
+.env*
+config/
+readme_images/
+training/

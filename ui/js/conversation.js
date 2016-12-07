@@ -26,7 +26,6 @@ var Conversation = (function() {
   'use strict';
   var ids = {
     userInput: 'user-input',
-    userInputDummy: 'user-input-dummy',
     chatFlow: 'chat-flow',
     chatScrollWrapper: 'chat-scroll-wrapper'
   };
@@ -52,7 +51,7 @@ var Conversation = (function() {
   function init() {
     chatSetup();
     initEnterSubmit();
-    setupInputBox();
+    // setupInputBox();
     Api.initConversation(); // Load initial Watson greeting
   }
 
@@ -183,7 +182,6 @@ var Conversation = (function() {
   }
 
   // Display a message, given a message payload and a message type (user or Watson)
-  // TODO: Allow multi-line responses
   // TODO: Make sure that newline characters at the end don't mess with the question mark detection
   function displayMessage(newPayload, typeValue) {
     var isUser = isUserMessage(typeValue);
@@ -203,6 +201,7 @@ var Conversation = (function() {
 
       var chatBoxElement = document.getElementById(ids.chatFlow);
 
+      //TODO: Improve image displaying standard
       if(Array.isArray(text)){
         for(var i in text){
           var img_url;
@@ -210,11 +209,7 @@ var Conversation = (function() {
             if(newPayload.output.image && i == text.length-1){
               img_url = newPayload.output.image;
             }
-            // else if(newPayload.output.action == 'get_weather' && i == 0) {
-            //   img_url = 'http://icons.wxug.com/graphics/wu2/logo_130x80.png';
-            // }
           }
-
           var messageDiv = buildMessageDomElement(text[i], isUser, img_url);
           chatBoxElement.appendChild(messageDiv);
         }

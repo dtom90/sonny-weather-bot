@@ -19,8 +19,9 @@
 var TTSModule = (function() {
   'use strict';
   var audio = null; // Initialize audio to null
-  var button = document.getElementById('output-audio');
-  button.value = 'ON'; // TTS is default - not mute
+  var button = document.getElementById('speaker-image');
+  button.value = button.getAttribute('value');
+  var audio_setting = localStorage.getItem("audio_setting") || button.value;
   Common.hide(button); // In case user is using invalid browsers
 
   return {
@@ -31,6 +32,7 @@ var TTSModule = (function() {
   function init() {
     textToSpeech();
     checkBrowsers();
+    checkStoredSetting();
   }
 
   // Create a callback when a new Watson response is received to start speech
@@ -38,7 +40,7 @@ var TTSModule = (function() {
     var currentResponsePayloadSetter = Api.setWatsonPayload;
     Api.setWatsonPayload = function(payload) {
       currentResponsePayloadSetter.call(Api, payload);
-      playCurrentAudio(payload.output); // Plays audio using output text
+      playCurrentAudio(payload.output); // Plays audio using output speech or text
     };
   }
 
@@ -50,16 +52,24 @@ var TTSModule = (function() {
     }
   }
 
+  function checkStoredSetting() {
+    if(audio_setting !== button.value)
+      toggle();
+  }
+
   // Toggle TTS/Mute button
   function toggle() {
     if (button.value === 'OFF') {
       button.value = 'ON';
       button.setAttribute('class', 'audio-on');
     } else {
-      audio.pause(); // Pause the current audio if the toggle is turned OFF
+      if (audio !== null && !audio.ended)
+        audio.pause(); // Pause the current audio if the toggle is turned OFF
       button.value = 'OFF';
       button.setAttribute('class', 'audio-off');
     }
+    button.setAttribute('value', button.value);
+    localStorage.setItem("audio_setting", button.value);
   }
 
   // Stops the audio for an older message and plays audio for current message
@@ -73,15 +83,18 @@ var TTSModule = (function() {
 
         if (output.text) { // If payload.text is defined
 
+          // prefer the output speech, otherwise read the output text
+          //TODO: handle multiple strings, some with speech, some with text.
           var voice_output = output.speech ? output.speech : output.text;
 
-          if (voice_output[voice_output.length - 1] == "?" || output.autoMic) { // if Watson is asking the user a question,
-            output['ref'] = 'STT';  // allow the user to respond with the mic on
-          }
+          // join array of strings into one string of sentences for correct voice output
+          if(Array.isArray(voice_output)) voice_output = voice_output.join('. ');
+
           // Pauses the audio for older message if there is a more current message
           if (audio !== null && !audio.ended) {
             audio.pause();
           }
+          //TODO: gracefully handle: Failed to load resource: the server responded with a status of 400 (Bad Request)
           audio = WatsonSpeech.TextToSpeech.synthesize({
             text: voice_output, // Output text/response
             voice: 'en-US_MichaelVoice', // Default Watson voice
@@ -90,7 +103,7 @@ var TTSModule = (function() {
           });
           // When the audio stops playing
           audio.onended = function() {
-            allowSTT(output); // Check if user wants to use STT
+            allowSTT(output, voice_output); // Check if user wants to use STT
           };
         } else {
           // Pauses the audio for older message if there is a more current message
@@ -106,9 +119,15 @@ var TTSModule = (function() {
     });
   }
 
-  // Check ref for 'STT' and allow user to use STT
-  function allowSTT(payload) {
-    if (payload.ref === 'STT') {
+  // Check for conditions to allow user to use STT input
+  function allowSTT(payload, voice_output) {
+
+    if (payload.ref === 'STT' ||        // IF user toggled microhpone button, always activate STT
+        button.value === 'ON' &&        // IF audio control button is switched ON, then check:
+        (mic_setting === 'always' ||      // if mic_setting is 'always', activate STT
+                                          // if mic_setting is 'prompt', check for autoMic setting or question mark
+         mic_setting === 'prompt' && (payload.autoMic || voice_output && voice_output[voice_output.length-1]==='?'))) {
+
       STTModule.speechToText();
     }
   }
