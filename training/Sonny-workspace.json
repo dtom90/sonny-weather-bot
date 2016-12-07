@@ -1,1168 +1,1261 @@
 {
 	"name": "Sonny - Cognitive Weather Bot",
-	"created": "2016-12-06T20:05:05.297Z",
+	"created": "2016-12-07T15:30:56.843Z",
 	"intents": [
 		{
+			"intent": "Approval",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
+			"examples": [
+				{
+					"text": "awesome",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "cool",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "excellent",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "fabulous",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "fantastic",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "great",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "ha ha ha",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "I approve",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "I liked that",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "I like that joke",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "now you're catching on",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "okay",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "stupendous",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "that's nice to hear",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "That was great",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "that was pretty funny",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				},
+				{
+					"text": "you're starting to learn",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
+				}
+			],
+			"description": null
+		},
+		{
 			"intent": "AskAbilities",
-			"created": "2016-12-07T00:56:26.531Z",
-			"updated": "2016-12-07T00:56:26.531Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "how can you help me",
-					"created": "2016-12-07T00:56:26.531Z",
-					"updated": "2016-12-07T00:56:26.531Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what are you capable of",
-					"created": "2016-12-07T00:56:26.531Z",
-					"updated": "2016-12-07T00:56:26.531Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what are your abilities",
-					"created": "2016-12-07T00:56:26.531Z",
-					"updated": "2016-12-07T00:56:26.531Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what can you do",
-					"created": "2016-12-07T00:56:26.531Z",
-					"updated": "2016-12-07T00:56:26.531Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what is your function",
-					"created": "2016-12-07T00:56:26.531Z",
-					"updated": "2016-12-07T00:56:26.531Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "AskWho",
-			"created": "2016-12-07T01:13:46.572Z",
-			"updated": "2016-12-07T01:14:01.003Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "What do they call you?",
-					"created": "2016-12-07T01:13:46.572Z",
-					"updated": "2016-12-07T01:13:46.572Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What do you go by?",
-					"created": "2016-12-07T01:13:46.572Z",
-					"updated": "2016-12-07T01:13:46.572Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What is your designation?",
-					"created": "2016-12-07T01:13:46.572Z",
-					"updated": "2016-12-07T01:13:46.572Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What is your name?",
-					"created": "2016-12-07T01:13:46.572Z",
-					"updated": "2016-12-07T01:13:46.572Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Who are you?",
-					"created": "2016-12-07T01:13:46.572Z",
-					"updated": "2016-12-07T01:13:46.572Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Who goes there?",
-					"created": "2016-12-07T01:13:46.572Z",
-					"updated": "2016-12-07T01:13:46.572Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Who is it",
-					"created": "2016-12-07T01:13:46.572Z",
-					"updated": "2016-12-07T01:13:46.572Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Who's there",
-					"created": "2016-12-07T01:13:46.572Z",
-					"updated": "2016-12-07T01:13:46.572Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "FeelsLike",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "Does it feel like a cold day?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Give me the real feel for Memphis Tennessee",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How cold is it with the wind in Cleveland",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How does it feel in Arlington",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How does it feel like today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How does it feel like today in San Francisco?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How does it feel like tomorrow?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How hot does it feel in New Orleans",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How hot does it really feel in Arlington Texas",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Real feel conditions in Garland Texas",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Real feel for San Bernadino",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What did it feel like yesterday in Dallas?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What does it feel like?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What does it feel like in Tampa",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What will it feel like in Mesa this afternoon",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "Humidity",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "Can I expect dry weather in Portland tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Do I need a humidifier today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How humid is it in Newark",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How wet will the air be in Kansas City this afternoon",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Humidity",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "i'm really sweating because of the humidity",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is it humid in Denver?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is the weather dry in Los Angeles?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "it is muggy today",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Was it humid in san Francisco",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what is the humidity in Poughkeepsie",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What’s the humidity like in Laredo",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will it be dry in El Paso Texas on Thursday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will it be humid tomorrow in Seattle",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will it be sticky in Baltimore Maryland tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will the air feel comfortable tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "Rain",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "Do I need an umbrella?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "do I need an umbrella in Tulsa Oklahoma",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Do I need a raincoat in Los Angeles?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Do I need to water my garden?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "how rainy is it in Jacksonville Florida",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "how rainy will it be in Irvine California this evening",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "is it raining in El Monte California",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is it raining in New York",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "is there a chance of flooding?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "It’s starting to drizzle",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "precipitation conditions for Mesa Arizona",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "precipitation Montgomery Alabama",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "rain in Beaumont Texas",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "rain information in Independence Missouri",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "should I bring an umbrella with me tomorrow in Glendale Arizona",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "should I expect rainy conditions in Fort Wayne this afternoon",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "should I wear rain boots in Omaha Nebraska",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "the rain Ann Arbor Michigan",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what's the rain like in Seattle Washington",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what will the rain be like in Buffalo New York on Friday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will I need an umbrella in New York on today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "will it rain in Riverside California on Thursday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will it rain tomorrow?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "SmallTalkGreeting",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "Good afternoon",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Good evening",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "greetings",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "hello",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Hey Sonny",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "hey what's up Sonny",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Hi",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "hi how are you today",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Hi there",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "how are you",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "how are you sonny",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How do you do?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "howdy",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "how's it going",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "salutations",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "Snow",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "Can I go skiing today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Can I go snowboarding in Aurora Colorado",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Can I have a snowball fight this afternoon in Milwaukee",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Can I ski in Denver Colorado tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Do I need snow boots today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Do I need snow tires today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How much snow is there",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How much snow should I expect in Buffalo New York",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is it snowing",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Snowiness in Memphis",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Snow in Oklahoma City",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "There are flurries",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "will i need a shovel in denver tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will I need boots tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will it snow in Denver?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will it snow today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will it snow tomorrow?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "Switch",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "Baltimore",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Boston",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "@city",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Cleveland",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Denver",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Florida",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How about in Dallas",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How about Miami",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "I actually wanted tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "I meant today",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Now tell me about New York",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "San Francisco",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Texas",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What about Boston",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What about in Austin",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "Temperature",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "Can I wear shorts today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "do i need a coat",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "do I need a jacket in Billings Montana",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "do I need a jacket to go outside",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Do I need scarf and gloves?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "do i need to wear a coat",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "heat in St. Louis on Friday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "how hot is it expected to be in Greensboro North Carolina on Wednesday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How hot is it today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How hot was it in Topeka last night",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "how should I dress in Springfield Illinois",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "i don't need a sweater because it's mild",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is it cold in Los Angeles?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "is it going to be cold this afternoon",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is it hot in Denver?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "should I wear a jacket in Jersey City this evening",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "should I wear a tee shirt in Honolulu",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "temperature conditions for Jersey city on Saturday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "temperature information in Memphis",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "temp in Los Angeles Thursday evening",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "the temperature in El Paso",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Was it cold in Dallas last night",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what is the temperature in Poughkeepsie",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what'll the temp in Santa Ana be tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What’s the temperature?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What’s the temperature in Denver right now?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what's the temperature in Washington D.C.",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what will the temperature be in Orlando on Friday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what will the temperature be in Pittsburgh this evening",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "will it be cold in Toledo Ohio tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "Thank",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "I appreciate it",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "thanks a lot",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Thanks very much",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "thank you",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Thank you, Sonny",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "you're the best",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "UV",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "Do I need sun glasses today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Do I need sunscreen in New York?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Do I need sun tan lotion in Los Angeles",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "how intense will the sun be this afternoon in New York",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How sunny is it in Boston",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "i need to stay in the shade because the uv index is high today",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is it cloudy?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is it sunny in New York?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is the sun strong today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Should I be mindful of my skin in Mesa Arizona",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "should I protect my skin in Providence Rhode Island",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "should I wear sunscreen in Los Angeles this afternoon",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "should I worry about sunburn today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Sun intensity in Albuquerque",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "The sun was bright yesterday.",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "UV conditions in Mobile Arizona",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what is today's uv index in san Francisco",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What’s the UV level?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will it be sunny on Monday in Los Angeles?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "Weather",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "can I go out and play on Friday in Oakland California",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Can you tell me what the weather is going to be tomorrow?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "conditions in Miami Florida",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "get the weather in Phoenix",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "give me the forecast for New Orleans on Thursday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "should I expect some nice weather in Saint Paul Minnesota next Tuesday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "the weather in Chicago",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "weather conditions in San Antonio Texas",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "weather information in Houston Texas",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what are the expected conditions for Sacramento on Tuesday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what is the weather",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What is tomorrow’s forecast?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What should I wear today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what's it like in Columbus",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What’s it like outside?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what's the expected forecast for Long Beach California tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what's the forecast for san francisco on Saturday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What’s the weather in New York?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What’s the weather in San Francisco tomorrow?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what's the weather in San Jose California",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What’s the weather today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What’s the weather tomorrow?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what will the weather be in Atlanta tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what will the weather be in Raleigh North Carolina on Friday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "will I enjoy the outdoors in Plano Texas this evening",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will we have good weather?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		},
 		{
 			"intent": "Wind",
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"examples": [
 				{
 					"text": "Can I expect gusts of wind this afternoon in Las Vegas Nevada",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "how fast is the wind blowing",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How strong is the wind?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How windy is it",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How windy is it today?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "How windy will it be",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "is it windy in Chicago",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is it windy in Denver?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Is it windy in Los Angeles?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "it is windy",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "What are the wind conditions like",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "what is the wind speed",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Will it be windy tomorrow?",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Wind",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Windiness for Portland Maine",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				},
 				{
 					"text": "Wind in Nashville",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z"
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z"
 				}
 			],
 			"description": null
 		}
 	],
-	"updated": "2016-12-07T01:15:17.848Z",
+	"updated": "2016-12-07T15:31:22.374Z",
 	"entities": [
 		{
 			"type": null,
@@ -1171,8 +1264,8 @@
 			"values": [
 				{
 					"value": "today",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z",
 					"metadata": null,
 					"synonyms": [
 						"this afternoon",
@@ -1183,8 +1276,8 @@
 				},
 				{
 					"value": "tomorrow",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z",
 					"metadata": null,
 					"synonyms": [
 
@@ -1192,16 +1285,16 @@
 				},
 				{
 					"value": "yesterday",
-					"created": "2016-12-06T20:05:05.297Z",
-					"updated": "2016-12-06T20:05:05.297Z",
+					"created": "2016-12-07T15:30:56.843Z",
+					"updated": "2016-12-07T15:30:56.843Z",
 					"metadata": null,
 					"synonyms": [
 
 					]
 				}
 			],
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"open_list": false,
 			"description": null
 		}
@@ -1219,8 +1312,8 @@
 			},
 			"parent": null,
 			"context": null,
-			"created": "2016-12-07T00:56:51.125Z",
-			"updated": "2016-12-07T01:14:46.789Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"metadata": null,
 			"conditions": "#AskAbilities",
 			"description": null,
@@ -1230,12 +1323,27 @@
 		{
 			"go_to": null,
 			"output": {
+				"text": "I'm glad that you approve!"
+			},
+			"parent": null,
+			"context": null,
+			"created": "2016-12-07T15:31:10.982Z",
+			"updated": "2016-12-07T15:31:22.374Z",
+			"metadata": null,
+			"conditions": "#Approval",
+			"description": null,
+			"dialog_node": "node_25_1481124670936",
+			"previous_sibling": "node_23_1481072211154"
+		},
+		{
+			"go_to": null,
+			"output": {
 				"text": "My designation is Sonny. I am a Cognitive Weather Bot."
 			},
 			"parent": null,
 			"context": null,
-			"created": "2016-12-07T01:14:46.789Z",
-			"updated": "2016-12-07T01:15:17.848Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"metadata": null,
 			"conditions": "#AskWho",
 			"description": null,
@@ -1245,29 +1353,12 @@
 		{
 			"go_to": null,
 			"output": {
-				"text": "Set date to $date"
-			},
-			"parent": "node_1_1468969279427",
-			"context": {
-				"date": "@date"
-			},
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
-			"metadata": null,
-			"conditions": "@date",
-			"description": null,
-			"dialog_node": "node_1_1478620386147",
-			"previous_sibling": null
-		},
-		{
-			"go_to": null,
-			"output": {
 				"text": "Sorry, I can only answer questions about the weather."
 			},
 			"parent": null,
 			"context": null,
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"metadata": null,
 			"conditions": "anything_else",
 			"description": null,
@@ -1281,8 +1372,8 @@
 			},
 			"parent": "node_1_1468969279427",
 			"context": null,
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"metadata": null,
 			"conditions": "true",
 			"description": null,
@@ -1296,13 +1387,13 @@
 			},
 			"parent": null,
 			"context": null,
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-07T00:56:51.125Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:31:10.982Z",
 			"metadata": null,
 			"conditions": "#Thank",
 			"description": null,
 			"dialog_node": "node_5_1478074372304",
-			"previous_sibling": "node_23_1481072211154"
+			"previous_sibling": "node_25_1481124670936"
 		},
 		{
 			"go_to": null,
@@ -1312,8 +1403,8 @@
 			},
 			"parent": "node_1_1468969279427",
 			"context": null,
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"metadata": null,
 			"conditions": "$city || $state",
 			"description": null,
@@ -1328,8 +1419,8 @@
 			},
 			"parent": null,
 			"context": null,
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-07T01:04:29.504Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"metadata": null,
 			"conditions": "conversation_start || #SmallTalkGreeting",
 			"description": null,
@@ -1349,8 +1440,8 @@
 			"context": {
 				"condition": "<? intents[0].intent ?>"
 			},
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"metadata": null,
 			"conditions": "#Weather || #Temperature || #Rain || #Humidity || #UV || #Wind || #FeelsLike || #Snow",
 			"description": null,
@@ -1368,16 +1459,37 @@
 			},
 			"parent": null,
 			"context": null,
-			"created": "2016-12-06T20:05:05.297Z",
-			"updated": "2016-12-06T20:05:05.297Z",
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
 			"metadata": null,
 			"conditions": "#Switch",
 			"description": null,
 			"dialog_node": "node_4_1469020475714",
 			"previous_sibling": "node_1_1468969279427"
+		},
+		{
+			"go_to": {
+				"return": null,
+				"selector": "condition",
+				"dialog_node": "node_2_1478611391665"
+			},
+			"output": {
+				"text": "Set date to $date"
+			},
+			"parent": "node_1_1468969279427",
+			"context": {
+				"date": "@date"
+			},
+			"created": "2016-12-07T15:30:56.843Z",
+			"updated": "2016-12-07T15:30:56.843Z",
+			"metadata": null,
+			"conditions": "@date",
+			"description": null,
+			"dialog_node": "node_1_1478620386147",
+			"previous_sibling": null
 		}
 	],
-	"workspace_id": "2b9f93e3-cffe-43eb-bdfe-9a09d953ea27",
+	"workspace_id": "2b44744f-0e87-4915-ac53-87249055101f",
 	"counterexamples": [
 
 	]

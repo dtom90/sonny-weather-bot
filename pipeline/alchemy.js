@@ -23,9 +23,9 @@ var watson = require('watson-developer-cloud'),
   async = require('async');
 
 // Alchemy Language API
-var alchemy_language = watson.alchemy_language({
+var alchemy_language = watson.alchemy_language(extend({
   api_key: process.env.ALCHEMY_LANGUAGE_API_KEY
-});
+}, vcapServices.getCredentials('alchemy_api')));
 
 // Exports
 var exports = module.exports = {};
