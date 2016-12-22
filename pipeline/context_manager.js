@@ -37,48 +37,34 @@ module.exports = {
 
   update_context: function(payload, extracted, callback) {
 
-    var new_entities = {};
-
-    // Get any extracted date
-    if (extracted.dates && extracted.dates.length > 0) {  // if we found at least one date,
-      if (DEBUG) console.log(extracted.dates);
-      var date = extracted.dates[0].date.substring(0, 8);  // extract only the date
-      new_entities.date = date.substring(0, 4) + '-' + date.substring(4, 6) + '-' + date.substring(6, 8); // add in the dashes
+    // TODO: Can we put this in Watson Conversation?
+    if(payload.context.asked_state && payload.context.options.includes(payload.input.text)){
+      payload.input.new = {state: payload.input.text}
     }
+    else {
 
-    // Get any extracted cities and states
-    for (var i in extracted.entities) {
-      var entity = extracted.entities[i];
-      if (entity.type in entity_types && !(entity_types[entity.type] in new_entities))
-        new_entities[entity_types[entity.type]] = entity.text;
+      var new_entities = {};
+
+      // Get any extracted date
+      if (extracted.dates && extracted.dates.length > 0) {  // if we found at least one date,
+        if (DEBUG) console.log(extracted.dates);
+        var date = extracted.dates[0].date.substring(0, 8);  // extract only the date
+        new_entities.date = date.substring(0, 4) + '-' + date.substring(4, 6) + '-' + date.substring(6, 8); // add in the dashes
+      }
+
+      // Get any extracted cities and states
+      for (var i in extracted.entities) {
+        var entity = extracted.entities[i];
+        if (entity.type in entity_types && !(entity_types[entity.type] in new_entities))
+          new_entities[entity_types[entity.type]] = entity.text;
+      }
+
+      // Transform any shorthand names to full names
+      if(new_entities.city && new_entities.city.toUpperCase() in city_abbrevs)
+        new_entities.city = city_abbrevs[new_entities.city.toUpperCase()];
+
+      payload.input.new = new_entities;
     }
-
-    // Transform any shorthand names to full names
-    if(new_entities.city && new_entities.city.toUpperCase() in city_abbrevs)
-      new_entities.city = city_abbrevs[new_entities.city.toUpperCase()];
-
-    payload.input.new = new_entities;
-
-    // // if we switched cities, clear the state.
-    // if (payload.context.state && new_entities.city != payload.context.city)
-    //   payload.context.state = null;
-    //
-    // // if we switched states, clear the city.
-    // if (payload.context.city && !payload.context.asked_state && new_entities.state != payload.context.state)
-    //   payload.context.city = null;
-    //
-    // if (new_entities.state) {
-    //   payload.context.state = new_entities.state;
-    //   if (new_entities.city) {
-    //     payload.context.city = new_entities.city;
-    //   }
-    // } else if (new_entities.city) {
-    //   payload.context.city = new_entities.city;
-    // }
-    // if (payload.context.asked_state)
-    //   payload.context.asked_state = false;
-    //
-    // // TODO: payload.alchemy_entities = extracted;
 
     if (DEBUG) {
       console.log("\nNew Context:");
