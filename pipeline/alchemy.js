@@ -45,13 +45,18 @@ exports.extract_entities = function(payload, finish){
   var text = payload.input.text;
   var extracted = {};
 
-  // Create the new pipeline
-  var current_pipeline = pipeline.slice();
-  current_pipeline.splice(0, 1, async.apply(first_function, text, extracted));
+  // // Create the new pipeline
+  // var current_pipeline = pipeline.slice();
+  // current_pipeline.splice(0, 1, async.apply(first_function, text, extracted));
+  //
+  // // TODO: make this parallel
+  // // Begin the waterfall
+  // async.waterfall(current_pipeline, function(err, text, extracted) {
+  //   if (err) console.err(err);
+  //   finish(extracted);
+  // });
 
-  // TODO: make this parallel
-  // Begin the waterfall
-  async.waterfall(current_pipeline, function(err, text, extracted) {
+  extract_entities(text, extracted, function(err, text, extracted) {
     if (err) console.err(err);
     finish(extracted);
   });

@@ -18,18 +18,18 @@
 
 var exports = module.exports = {};
 
-var weatherUtil = require('./../lib/weatherUtil'); // Require the Weather Underground Util
+var weatherUtil = require('../lib/weatherUtil'); // Require the Weather Underground Util
 var WU_API_KEY = process.env.WEATHER_UNDERGROUND_API_KEY || null; // Get Weather Underground API key from the .env file
 var DEBUG = false;
 var DEBUG_UTIL = false;
 
-exports.handle_message = function(data, next) {
+exports.handle_message = function(data, callback) {
 
-  if (data.output.action == 'get_weather')             // if Watson Conversation set output.action to 'get_weather',
+  if (data.output.action == 'get_weather')  // if Watson Conversation set output.action to 'get_weather',
 
-  // then make a weather request using the JSON data, and get the response text, speech, and images to display
+    // then make a weather request using the JSON data, and get the response text, speech, and images to display
     makeWeatherRequest(data, function(responseText, responseSpeech, image_url) {
-      // if(DEBUG) console.log(responseText);
+      if(DEBUG) console.log(responseText);
 
       /**
        * We can display multiple separate text lines in the app,
@@ -47,11 +47,13 @@ exports.handle_message = function(data, next) {
 
       if(image_url) data.output.image = image_url;
 
-      next(null, data); // respond with the JSON data
+      if(DEBUG) console.log(data);
+
+      callback(null, data); // respond with the JSON data
     });
   else {                                                              // if we are not yet ready to get the weather, (i.e. still in the dialog)
     data.output.text = data.output.text[data.output.text.length - 1];   // then set the output to be the last element in the array of output text strings
-    next(null, data);                                                     // and respond with the JSON data
+    callback(null, data);                                                     // and respond with the JSON data
   }
 };
 
@@ -82,13 +84,21 @@ function makeWeatherRequest(data, callback) {
   if(data.context.city) data.output.text[data.output.text.length - 1] += data.context.city;
   if(data.context.state) data.output.text[data.output.text.length - 1] += ' the state of '+data.context.state;
 
+  var dates = data.entities.filter(function (e){ return e.entity == 'sys-date' })
+  var date = dates.length > 0 ? dates[0].value : null;
+
   // make the weather request
-  if (DEBUG) console.log("\nMaking weather request for " + data.context.condition + "," + data.context.city + "," + data.context.state + "," + data.context.date);
-  weatherUtil.makeWeatherRequest(WU_API_KEY, data.context.condition, data.context.city, data.context.state, data.context.date, DEBUG_UTIL,
+  if (DEBUG) console.log("\nMaking weather request for " + data.context.condition + "," + data.context.city + "," + data.context.state + "," + date);
+  weatherUtil.makeWeatherRequest(WU_API_KEY, data.context.condition, data.context.city, data.context.state, date, DEBUG_UTIL,
     function(weather_reply, state) {                      // callback function called from the weatherUtil
       if(weather_reply.error){
-        console.error(weather_reply.error);
-        callback("I'm sorry, I had some trouble looking up the weather. Please try again.");
+        if(DEBUG) console.error(weather_reply.error);
+        if(weather_reply.error.includes('No cities match'))
+          callback("I'm sorry, but "+weather_reply.error.toLowerCase());
+        else if(weather_reply.error.includes('historical conditions'))
+          callback(weather_reply.error);
+        else
+          callback("I'm sorry, I had some trouble looking up the weather. Please try again.");
       }
       else {
 
