@@ -42,7 +42,7 @@ const alchemy = require('./pipeline/alchemy'),
   context_manager = require('./pipeline/context_manager'),
   fulfillment = require('./pipeline/fulfillment');
 
-var DEBUG = process.env.DEBUG || false;
+var DEBUG = process.env.DEBUG=='true' || false;
 
 //The app owner may optionally configure a cloudand db to track user input.
 //This cloudand db is not required, the app will operate without it.
