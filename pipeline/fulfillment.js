@@ -97,7 +97,7 @@ function makeWeatherRequest(data, callback) {
     if(date) action += " on " + date;
   if (DEBUG) console.log("\n"+action);
   weatherUtil.makeWeatherRequest(WU_API_KEY, data.context.condition, data.context.city, data.context.state, date, DEBUG_UTIL,
-    function(weather_reply, state) {                      // callback function called from the weatherUtil
+    function(weather_reply, new_city) {                      // callback function called from the weatherUtil
       if(weather_reply.error){
         if(DEBUG) console.error(weather_reply.error);
         if(weather_reply.error.includes('No cities match'))
@@ -123,7 +123,7 @@ function makeWeatherRequest(data, callback) {
           }
 
         } else {                                      // if don't need to ask a question,
-          // if (data.context.state) data.context.state = null; // forget the state
+          if(new_city != data.context.city) data.context.city = new_city;
           callback(weather_reply.tell, null, weather_reply.image);                 // call the callback function with the output text (weather_reply.tell)
         }
 
