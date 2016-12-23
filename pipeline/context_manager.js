@@ -63,7 +63,8 @@ module.exports = {
       if(new_entities.city && new_entities.city.toUpperCase() in city_abbrevs)
         new_entities.city = city_abbrevs[new_entities.city.toUpperCase()];
 
-      payload.input.new = new_entities;
+      if(!payload.context.asked_state || payload.context.asked_state && payload.context.options.includes(new_entities.state))
+        payload.input.new = new_entities;
     }
 
     if (DEBUG) {
