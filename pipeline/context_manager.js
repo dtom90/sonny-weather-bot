@@ -23,6 +23,7 @@ var entity_types = {
   'City': 'city',
   'Person': 'city',
   'Organization': 'city',
+  'GeographicFeature': 'city',
   'StateOrCounty': 'state'
 };
 
