@@ -1,4 +1,4 @@
-# Hello Watson
+# Sonny the Weather Bot
 <!--[![Build Status](https://travis-ci.org/watson-developer-cloud/car-dashboard.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/car-dashboard)-->
 <!--[![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/car-dashboard?branch=master)-->
 
@@ -6,10 +6,11 @@ This application uses Watson's intelligence to provide an interactive chatbot wi
 
 It uses the following [Watson Developer Cloud](http://www.ibm.com/watson/developercloud/) services:
 - [Speech to Text](http://www.ibm.com/watson/developercloud/speech-to-text.html)
+- [AlchemyLanguage](https://www.ibm.com/watson/developercloud/alchemy-language.html)
 - [Conversation](https://www.ibm.com/watson/developercloud/conversation.html)
 - [Text to Speech](https://www.ibm.com/watson/developercloud/text-to-speech.html)
 
-This app is based off of the [Conversation Car Dashboard Demo Application](https://conversation-demo.mybluemix.net/) and the code was forked from [this GitHub Repository](https://github.com/watson-developer-cloud/car-dashboard)
+This app is based off of the [Hello Watson](https://hello-watson.mybluemix.net/) and the code was forked from [this GitHub Repository](https://github.com/dtom90/hello-watson)
 
 For more information about Conversation, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/index.shtml).
 
@@ -40,7 +41,7 @@ The app interface is designed to interface with Watson Conversation. The interfa
 ## Deploy the App
 1 Click this button to Deploy to Bluemix.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/dtom90/hello-watson)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/dtom90/sonny-weather-bot)
 
 2 Log in with an existing Bluemix account or sign up.
 
@@ -70,9 +71,9 @@ To build the application:
 
 1 Download and install the [Cloudfoundry CLI](https://github.com/cloudfoundry/cli) tool.
 
-2 Git clone the project `https://github.com/dtom90/hello-watson`
+2 Git clone the project `https://github.com/dtom90/sonny-weather-bot`
 
-3 Navigate to the `hello-watson` folder
+3 Navigate to the `sonny-weather-bot` folder
 
 4 Connect to Bluemix in the command-line tool:
 
