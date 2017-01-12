@@ -8,6 +8,14 @@
         }
       }
     ],
+    "conversation": [
+      {
+        "credentials": {
+          "password": "",
+          "username": ""
+        }
+      }
+    ],
     "text_to_speech": [
       {
         "credentials": {
