@@ -8,4 +8,5 @@ applications:
   - TextToSpeech
   - WatsonConversation
   env:
-    NPM_CONFIG_PRODUCTION: false
+    DESCRIPTION: "Your Bot Description"
+    WORKSPACE_ID: <CONVERSATION_WORKSPACE_ID>
