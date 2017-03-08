@@ -1,12 +1,24 @@
 ---
+declared-services:
+  watson-conversation:
+    label: conversation
+    plan: free
+  speech-to-text:
+    label: speech_to_text
+    plan: standard
+  text-to-speech:
+    label: text_to_speech
+    plan: standard
 applications:
-- name: Hello Watson
+- name: Sonny
   memory: 128m
   command: npm start
   services:
-  - SpeechToText
-  - TextToSpeech
-  - WatsonConversation
+  - speech-to-text
+  - text-to-speech
+  - watson-conversation
   env:
-    DESCRIPTION: "Your Bot Description"
-    WORKSPACE_ID: <CONVERSATION_WORKSPACE_ID>
+    DESCRIPTION: "Weather Bot - Powered by Watson"
+    WORKSPACE_ID: <WORKSPACE_ID>
+    ALCHEMY_LANGUAGE_API_KEY: <ALCHEMY_LANGUAGE_API_KEY>
+    WEATHER_UNDERGROUND_API_KEY: <WEATHER_UNDERGROUND_API_KEY>

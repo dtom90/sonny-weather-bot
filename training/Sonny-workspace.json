@@ -1390,7 +1390,7 @@
       "metadata": null,
       "conditions": "true",
       "description": null,
-      "dialog_node": "City Present, Continue",
+      "dialog_node": "City Present - Continue",
       "previous_sibling": "Clear City if Absent"
     },
     {

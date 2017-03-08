@@ -10,7 +10,7 @@ declared-services:
     label: text_to_speech
     plan: standard
 applications:
-- name: Hello Watson
+- name: Sonny
   memory: 128m
   command: npm start
   services:
@@ -18,4 +18,4 @@ applications:
   - text-to-speech
   - watson-conversation
   env:
-    DESCRIPTION: "Your Personal Cognitive Assistant"
+    DESCRIPTION: "Weather Bot - Powered by Watson"

@@ -16,7 +16,7 @@
   },
   "author": "IBM Corp.",
   "dependencies": {
-    "async": "latest"
+    "async": "latest",
     "basic-auth-connect": "1.0.0",
     "body-parser": "1.15.1",
     "chai": "^3.5.0",
