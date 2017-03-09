@@ -17,17 +17,19 @@
  * Created by David on 11/8/16.
  */
 
-var DEBUG = false;
+let DEBUG = process.env.DEBUG=='true' || false;
 
-var entity_types = {
+let entity_types = {
   'City': 'city',
   'Person': 'city',
+  'Company': 'city',
   'Organization': 'city',
   'GeographicFeature': 'city',
-  'StateOrCounty': 'state'
+  'StateOrCounty': 'state',
+  'Country': 'state'
 };
 
-var city_abbrevs = {
+let city_abbrevs = {
   'LA': 'Los Angeles',
   'NYC': 'New York City',
   'VEGAS': 'Las Vegas',
@@ -44,18 +46,18 @@ module.exports = {
     }
     else {
 
-      var new_entities = {};
+      let new_entities = {};
 
       // Get any extracted date
       if (extracted.dates && extracted.dates.length > 0) {  // if we found at least one date,
         if (DEBUG) console.log(extracted.dates);
-        var date = extracted.dates[0].date.substring(0, 8);  // extract only the date
+        let date = extracted.dates[0].date.substring(0, 8);  // extract only the date
         new_entities.date = date.substring(0, 4) + '-' + date.substring(4, 6) + '-' + date.substring(6, 8); // add in the dashes
       }
 
       // Get any extracted cities and states
-      for (var i in extracted.entities) {
-        var entity = extracted.entities[i];
+      for (let i in extracted.entities) {
+        let entity = extracted.entities[i];
         if (entity.type in entity_types && !(entity_types[entity.type] in new_entities))
           new_entities[entity_types[entity.type]] = entity.text;
       }
@@ -69,8 +71,8 @@ module.exports = {
     }
 
     if (DEBUG) {
-      console.log("\nNew Context:");
-      console.log(payload.context);
+      console.log("\nNew Payload:");
+      console.log(payload);
     }
     callback(payload);
   }

@@ -38,7 +38,7 @@ var pipeline = [
 ];
 var first_function = pipeline[0];
 
-var DEBUG = false; // Debug for development
+var DEBUG = process.env.DEBUG=='true' || false; // Debug for development
 
 exports.extract_entities = function(payload, finish){
 

@@ -16,12 +16,12 @@
  * Created by David Thomason
  */
 
-var exports = module.exports = {};
+// const exports = module.exports = {};
 
-var weatherUtil = require('../lib/weatherUtil'); // Require the Weather Underground Util
-var WU_API_KEY = process.env.WEATHER_UNDERGROUND_API_KEY || null; // Get Weather Underground API key from the .env file
-var DEBUG = false;
-var DEBUG_UTIL = false;
+let weatherUtil = require('../lib/weatherUtil'); // Require the Weather Underground Util
+let WU_API_KEY = process.env.WEATHER_UNDERGROUND_API_KEY || null; // Get Weather Underground API key from the .env file
+let DEBUG = process.env.DEBUG=='true' || false;
+let DEBUG_UTIL = process.env.DEBUG=='true' || false;
 
 exports.handle_message = function(data, callback) {
 
@@ -47,7 +47,10 @@ exports.handle_message = function(data, callback) {
 
       if(image_url) data.output.image = image_url;
 
-      if(DEBUG) console.log(data);
+      if(DEBUG){
+        console.log("\nFinal Output:");
+        console.log(data);
+      }
 
       callback(null, data); // respond with the JSON data
     });
@@ -68,12 +71,12 @@ function makeWeatherRequest(data, callback) {
   // if(data.context.city instanceof Array)
   //   data.context.city = data.context.city[data.context.city.length-1].value;  // set the city to be the value of the last element in the array
   // if (data.context.state && data.context.state instanceof Array){
-  //   var state = null;
-  //   var state_city_mismatches = data.context.state.filter(function (x){ return x.value != data.context.city });  // get the number of states that do not match the city
+  //   let state = null;
+  //   let state_city_mismatches = data.context.state.filter(function (x){ return x.value != data.context.city });  // get the number of states that do not match the city
   //   if(state_city_mismatches.length > 0)
   //     state = state_city_mismatches[state_city_mismatches.length-1].value;
   //   else {
-  //     var state_city_matches = data.context.state.filter(function (x){ return x.value == data.context.city });  // get the number of states that match the city
+  //     let state_city_matches = data.context.state.filter(function (x){ return x.value == data.context.city });  // get the number of states that match the city
   //     if(state_city_matches.length >= 2)
   //       state = state_city_matches[state_city_matches.length-1]; // set the state to be the value of the last element in the array
   //   }
@@ -83,12 +86,12 @@ function makeWeatherRequest(data, callback) {
   // if(data.context.city) data.output.text[data.output.text.length - 1] += data.context.city;
   // if(data.context.state) data.output.text[data.output.text.length - 1] += ' the state of '+data.context.state;
 
-  var dates = data.entities.filter(function (e){ return e.entity == 'sys-date' });
-  var date = dates.length > 0 ? dates[0].value : null;
+  let dates = data.entities.filter(function (e){ return e.entity == 'sys-date' });
+  let date = dates.length > 0 ? dates[0].value : null;
 
   // make the weather request
   data.context.condition = data.context.condition || 'Weather'; //TODO: put this logic in Watson Conversation
-  var action = "looking up the " + data.context.condition.toLowerCase() + " in ";
+  let action = "looking up the " + data.context.condition.toLowerCase() + " in ";
     if(data.context.city){
       action += data.context.city;
       if(data.context.state) action += ", ";
