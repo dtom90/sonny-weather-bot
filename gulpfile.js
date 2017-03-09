@@ -29,18 +29,10 @@
   // Determine APP_NAME
   require('dotenv').config({silent: true}); // load from .env file
   var APP_NAME = process.env.APP_NAME;
-  if(!APP_NAME)
+  if (!APP_NAME)
     APP_NAME = process.env.VCAP_APPLICATION ? JSON.parse(process.env.VCAP_APPLICATION).name : null;
-  if (!APP_NAME) {
-    try { // Get document, or throw exception on error
-      var doc = yaml.safeLoad(fs.readFileSync('manifest.yml', 'utf8'));
-      var name = doc.applications[0].name;
-      if (typeof name !== 'undefined' && name) APP_NAME = name;
-    } catch (e) {
-    } finally {
-      if (!APP_NAME) APP_NAME = 'Hello Watson';
-    }
-  }
+  if (!APP_NAME)
+    APP_NAME = 'Sonny';
 
   // Set darkbackground (false by default)
   var TITLE = process.env.TITLE ? process.env.TITLE==='true' : true;
