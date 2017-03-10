@@ -57,7 +57,7 @@ exports.extract_entities = function(payload, finish){
   // });
 
   extract_entities(text, extracted, function(err, text, extracted) {
-    if (err) console.err(err);
+    if (err) console.error(err);
     finish(extracted);
   });
 };
