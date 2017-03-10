@@ -1225,7 +1225,7 @@
       "description": null
     }
   ],
-  "updated": "2017-03-09T01:41:15.324Z",
+  "updated": "2017-03-10T01:45:25.173Z",
   "entities": [
     {
       "type": null,
@@ -1497,9 +1497,9 @@
       "parent": null,
       "context": null,
       "created": "2017-03-08T02:47:57.422Z",
-      "updated": "2017-03-08T02:47:57.422Z",
+      "updated": "2017-03-10T01:45:25.173Z",
       "metadata": null,
-      "conditions": "#Switch",
+      "conditions": "#Switch || input.new.city",
       "description": null,
       "dialog_node": "Switch Context",
       "previous_sibling": "Weather Condition Query"
