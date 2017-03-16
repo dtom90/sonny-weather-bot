@@ -2,6 +2,8 @@
  * Created by David Thomason on 3/13/17.
  */
 
+const DEBUG = process.env.DEBUG=='true' || false;
+
 let express = require('express'),
   extend = require('util')._extend,
   router = express.Router(), // eslint-disable-line new-cap
@@ -9,7 +11,8 @@ let express = require('express'),
   watson = require('watson-developer-cloud');
 
 // local module requires
-const context_manager = require('./context_manager'),
+const alchemy = require('./alchemy'),
+  context_manager = require('./context_manager'),
   fulfillment = require('./fulfillment');
 
 // Set Conversation Service config
@@ -56,23 +59,49 @@ router.post('/', function(req, res) {
     }
   }
 
-  // Update the context before sending payload to the Watson Conversation service
-  context_manager.update_context(payload, function(new_payload) {
+  if (DEBUG) {
+    console.log("\nInitial Payload:");
+    console.log(payload);
+  }
 
-    // Send the input to the conversation service
-    conversation.message(new_payload, function(err, data) {
-      if (err) {
-        console.error('conversation.message error: ' + err.error);
-        if (err.description) console.error(err.description);
-        return res.status(err.code || 500).json(err);
+  //TODO: make this a waterfall
+  alchemy.extract_entities(payload, function(extracted) {
+
+    if (DEBUG) {
+      console.log("\nEntities Extracted by AlchemyLanguage:");
+      console.log(extracted);
+    }
+
+    context_manager.update_context(payload, extracted, function(payload) {
+
+      if (DEBUG) {
+        console.log("\nWatson Conversation Payload:");
+        console.log(payload);
       }
-      // if (logs) {
-      //   //If the logs db is set, then we want to record all input and responses
-      //   let id = uuid.v4();
-      //   logs.insert({'_id': id, 'request': new_payload, 'response': data, 'time': new Date()}, function (err, data) {
-      //   });
-      // }
-      fulfillment.handle_message(res, data);
+
+      // Send the input to the conversation service
+      conversation.message(payload, function(err, data) {
+
+        if (err) {
+          console.error('\nWatson Conversation Service Error:');
+          console.error(err);
+
+        } else {
+
+          if (DEBUG) {
+            console.log('\nWatson Conversation Output:');
+            console.log(data);
+          }
+
+          fulfillment.handle_message(data, function(err, result) {
+            if (err) {
+              console.error('\nFulfillment Error:');
+              console.error(err);
+            } else
+              return res.json(result);
+          });
+        }
+      });
     });
   });
 });
