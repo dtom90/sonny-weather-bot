@@ -67,7 +67,7 @@ router.post('/', function (req, res) {
   }
 
   if (DEBUG) {
-    console.log("\nInitial Payload:");
+    console.log('\nInitial Payload:');
     console.log(payload);
   }
 
@@ -75,14 +75,14 @@ router.post('/', function (req, res) {
   alchemy.extract_entities(payload, function(extracted) {
 
     if (DEBUG) {
-      console.log("\nEntities Extracted by AlchemyLanguage:");
+      console.log('\nEntities Extracted by AlchemyLanguage:');
       console.log(extracted);
     }
 
     context_manager.update_context(payload, extracted, function(payload) {
 
       if (DEBUG) {
-        console.log("\nWatson Conversation Payload:");
+        console.log('\nWatson Conversation Payload:');
         console.log(payload);
       }
 
@@ -95,7 +95,7 @@ router.post('/', function (req, res) {
 
         } else {
 
-          database.store(new_payload, data);
+          database.store(payload, data);
 
           if (DEBUG) {
             console.log('\nWatson Conversation Output:');

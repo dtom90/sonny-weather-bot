@@ -19,8 +19,8 @@
 // Imports
 var watson = require('watson-developer-cloud'),
   vcapServices = require('vcap_services'),
-  extend = require('util')._extend,
-  async = require('async');
+  extend = require('util')._extend;
+  // async = require('async');
 
 // Alchemy Language API
 var alchemy_language = watson.alchemy_language(extend({
@@ -31,11 +31,11 @@ var alchemy_language = watson.alchemy_language(extend({
 var exports = module.exports = {};
 
 // Pipeline for the various stages of NLP
-var pipeline = [
-  extract_dates,
-  extract_entities
-];
-var first_function = pipeline[0];
+// var pipeline = [
+//   extract_dates,
+//   extract_entities
+// ];
+// var first_function = pipeline[0];
 
 var DEBUG = process.env.DEBUG=='true' || false; // Debug for development
 
@@ -62,33 +62,33 @@ exports.extract_entities = function(payload, finish){
   });
 };
 
-function extract_dates(text, extracted, next) {
-
-  if (text) {
-
-    // Set up parameters for API call
-    var today = (new Date()).toISOString();
-    today = today.substring(0, 10) + ' ' + today.substring(11, 19);
-    var parameters = {
-      text: text,
-      anchorDate: today
-    };
-
-    // Call AlchemyLanguage API Date Extractor
-    alchemy_language.dates(parameters, function(err, response) {
-      if (err) {
-        console.err('\nAlchemy Language Date Extractor Error:');
-        next(err);
-      }
-      else {
-        extracted.dates = response.dates;
-        next(null, text, extracted);
-      }
-    });
-  } else {
-    next(null, text, extracted);
-  }
-}
+// function extract_dates(text, extracted, next) {
+//
+//   if (text) {
+//
+//     // Set up parameters for API call
+//     var today = (new Date()).toISOString();
+//     today = today.substring(0, 10) + ' ' + today.substring(11, 19);
+//     var parameters = {
+//       text: text,
+//       anchorDate: today
+//     };
+//
+//     // Call AlchemyLanguage API Date Extractor
+//     alchemy_language.dates(parameters, function(err, response) {
+//       if (err) {
+//         console.err('\nAlchemy Language Date Extractor Error:');
+//         next(err);
+//       }
+//       else {
+//         extracted.dates = response.dates;
+//         next(null, text, extracted);
+//       }
+//     });
+//   } else {
+//     next(null, text, extracted);
+//   }
+// }
 
 function extract_entities(text, extracted, next) {
 

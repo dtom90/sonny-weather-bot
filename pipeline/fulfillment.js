@@ -48,7 +48,7 @@ exports.handle_message = function(data, callback) {
       if(image_url) data.output.image = image_url;
 
       if(DEBUG){
-        console.log("\nFinal Output:");
+        console.log('\nFinal Output:');
         console.log(data);
       }
 
@@ -86,29 +86,29 @@ function makeWeatherRequest(data, callback) {
   // if(data.context.city) data.output.text[data.output.text.length - 1] += data.context.city;
   // if(data.context.state) data.output.text[data.output.text.length - 1] += ' the state of '+data.context.state;
 
-  let dates = data.entities.filter(function (e){ return e.entity == 'sys-date' });
+  let dates = data.entities.filter(function (e){ return e.entity == 'sys-date'; });
   let date = dates.length > 0 ? dates[0].value : null;
 
   // make the weather request
   data.context.condition = data.context.condition || 'Weather'; //TODO: put this logic in Watson Conversation
-  let action = "looking up the " + data.context.condition.toLowerCase() + " in ";
-    if(data.context.city){
-      action += data.context.city;
-      if(data.context.state) action += ", ";
-    }
-    if(data.context.state) action += data.context.state;
-    if(date) action += " on " + date;
-  if (DEBUG) console.log("\n"+action);
+  let action = 'looking up the ' + data.context.condition.toLowerCase() + ' in ';
+  if(data.context.city){
+    action += data.context.city;
+    if(data.context.state) action += ', ';
+  }
+  if(data.context.state) action += data.context.state;
+  if(date) action += ' on ' + date;
+  if (DEBUG) console.log('\n'+action);
   weatherUtil.makeWeatherRequest(WU_API_KEY, data.context.condition, data.context.city, data.context.state, date, DEBUG_UTIL,
     function(weather_reply, new_city) {                      // callback function called from the weatherUtil
       if(weather_reply.error){
         if(DEBUG) console.error(weather_reply.error);
         if(weather_reply.error.includes('No cities match'))
-          callback("I'm sorry, but "+weather_reply.error.toLowerCase());
-        else if(weather_reply.error.includes("I'm sorry"))
+          callback('I\'m sorry, but '+weather_reply.error.toLowerCase());
+        else if(weather_reply.error.includes('I\'m sorry'))
           callback(weather_reply.error);
         else
-          callback("I'm sorry, I had some trouble "+action);
+          callback('I\'m sorry, I had some trouble '+action);
       }
       else {
         if(DEBUG) console.log(weather_reply);
