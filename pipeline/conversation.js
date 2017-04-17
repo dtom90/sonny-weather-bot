@@ -13,7 +13,8 @@ let express = require('express'),
 // local module requires
 const alchemy = require('./alchemy'),
   context_manager = require('./context_manager'),
-  fulfillment = require('./fulfillment');
+  fulfillment = require('./fulfillment'),
+  database = require('./database.js');
 
 // Set Conversation Service config
 let conversationConfig = extend({
@@ -30,7 +31,14 @@ let workspace_id = process.env.WORKSPACE_ID || null;
 let conversation;
 if (conversation_vars_set()) {
   try {
-    conversation = new watson.ConversationV1(conversationConfig);
+    conversation = new watson.ConversationV1({
+      // If unspecified here, the CONVERSATION_USERNAME and CONVERSATION_PASSWORD env properties will be checked
+      // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
+      // username: '<username>',
+      // password: '<password>',
+      version_date: watson.ConversationV1.VERSION_DATE_2017_02_03,
+      version: 'v1'
+    });
   } catch (e) {
     console.error(e);
   }
@@ -38,8 +46,7 @@ if (conversation_vars_set()) {
   console.log('Using Workspace ID ' + workspace_id);
 }
 
-router.post('/', function(req, res) {
-
+router.post('/', function (req, res) {
   if (!conversation_vars_set()) {
     return res.json({'output': {'text': 'Oops! It doesn\'t look like I have been configured correctly...'}});
   }
@@ -88,6 +95,8 @@ router.post('/', function(req, res) {
 
         } else {
 
+          database.store(new_payload, data);
+
           if (DEBUG) {
             console.log('\nWatson Conversation Output:');
             console.log(data);
@@ -119,7 +128,7 @@ function conversation_vars_set() {
     correct = false;
   }
   if (!workspace_id) {
-    console.error(err_msg.replace('Var', 'Workspace ID').replace('CONVERSATION_VAR', 'WORKSPACE_ID') + ext_msg);
+    console.error(err_msg.replace('Var', 'Workspace ID').replace('CONVERSATION_VAR', 'WORKSPACE_ID'));
     correct = false;
   }
   return correct;
