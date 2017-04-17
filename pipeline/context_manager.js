@@ -41,7 +41,7 @@ module.exports = {
 
     // TODO: Can we put this in Watson Conversation?
     if(payload.context.asked_state && payload.context.options.indexOf(payload.input.text.toLowerCase())>=0){
-      payload.input.new = {state: payload.input.text}
+      payload.input.new = {state: payload.input.text};
     }
     else {
 
@@ -70,7 +70,7 @@ module.exports = {
     }
 
     if (DEBUG) {
-      console.log("\nNew Payload:");
+      console.log('\nNew Payload:');
       console.log(payload);
     }
     callback(payload);

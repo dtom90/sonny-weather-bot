@@ -1,5 +1,5 @@
 # Sonny the Weather Bot
-<!--[![Build Status](https://travis-ci.org/watson-developer-cloud/car-dashboard.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/car-dashboard)-->
+[![Build Status](https://travis-ci.org/dtom90/sonny-weather-bot.svg?branch=master)](http://travis-ci.org/dtom90/sonny-weather-bot)
 <!--[![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/car-dashboard?branch=master)-->
 
 This application uses Watson's intelligence to provide an interactive chatbot with a graphical & vocal interface.
