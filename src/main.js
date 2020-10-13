@@ -1,10 +1,10 @@
-import App from './App.svelte';
+const {AssistantApp} = require('hello-watson/svelte');
 
-const app = new App({
-	target: document.body,
-	props: {
-		name: 'world'
-	}
+const app = new AssistantApp({
+  target: document.body,
+  props: {
+    title: 'Sonny Weather Bot'
+  }
 });
 
-export default app;
+module.exports = app;
