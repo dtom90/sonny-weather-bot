@@ -787,6 +787,11 @@ dotenv@^6.2.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
   integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
 
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 ecdsa-sig-formatter@1.0.11:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.11.tgz#ae0f0fa2d85045ef14a817daa3ce9acd0489e5bf"
@@ -1204,15 +1209,16 @@ has-flag@^4.0.0:
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
-hello-watson@^0.10.3:
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/hello-watson/-/hello-watson-0.10.3.tgz#1e33caf56f152cbf8a6efb5d35a3e0520e2d0bb7"
-  integrity sha512-S2baoBx3iDiEpwAlHq87PdhmgILUSDcOiku9Z0eOLYOowd0JvsO7dnS+1nfVfmovXSVs4hQ7fVZvGrO6YB0eLA==
+hello-watson@^0.10.4:
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/hello-watson/-/hello-watson-0.10.4.tgz#4c192ad729b375059649389477d2a74888631d79"
+  integrity sha512-X8c/PgPb7TINvD1csWCY1y3UlSIBxIGaAvt8OVQSIigwgH2pk4QeZ0YspKbwOAKtT7PB0v5ElSO57si8Io/uIA==
   dependencies:
     "@polka/send-type" "^0.5.2"
     babel-eslint "^10.1.0"
     body-parser "^1.19.0"
     compression "^1.7.4"
+    dotenv "^8.2.0"
     express "^4.17.1"
     ibm-watson "^5.7.1"
     polka "^0.5.2"
