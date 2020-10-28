@@ -1,8 +1,4 @@
 language: node_js
-sudo: true
-cache:
-  directories:
-  - node_modules
+cache: yarn
 node_js: 7.5.0
-script:
-  - npm run lint
+script: yarn lint
