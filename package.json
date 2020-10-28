@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint .",
     "autofix": "eslint --fix .",
-    "test": "npm run lint",
+    "test": "yarn lint",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "node server.js"
