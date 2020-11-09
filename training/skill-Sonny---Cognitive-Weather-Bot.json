@@ -1,0 +1,1567 @@
+{
+  "intents": [
+    {
+      "intent": "AskAbilities",
+      "examples": [
+        {
+          "text": "how can you help me"
+        },
+        {
+          "text": "what are you capable of"
+        },
+        {
+          "text": "what are your abilities"
+        },
+        {
+          "text": "what can you do"
+        },
+        {
+          "text": "what is your function"
+        }
+      ]
+    },
+    {
+      "intent": "AskWho",
+      "examples": [
+        {
+          "text": "What do they call you?"
+        },
+        {
+          "text": "What do you go by?"
+        },
+        {
+          "text": "What is your designation?"
+        },
+        {
+          "text": "What is your name?"
+        },
+        {
+          "text": "Who are you?"
+        },
+        {
+          "text": "Who goes there?"
+        },
+        {
+          "text": "Who is it"
+        },
+        {
+          "text": "Who's there"
+        }
+      ]
+    },
+    {
+      "intent": "Cancel",
+      "examples": [
+        {
+          "text": "cancel"
+        },
+        {
+          "text": "exit"
+        },
+        {
+          "text": "negative"
+        },
+        {
+          "text": "never mind"
+        },
+        {
+          "text": "none"
+        },
+        {
+          "text": "none of those"
+        },
+        {
+          "text": "not"
+        },
+        {
+          "text": "quit"
+        },
+        {
+          "text": "stop"
+        }
+      ]
+    },
+    {
+      "intent": "FeelsLike",
+      "examples": [
+        {
+          "text": "Does it feel like a cold day?"
+        },
+        {
+          "text": "Give me the real feel for Memphis Tennessee"
+        },
+        {
+          "text": "How cold is it with the wind in Cleveland"
+        },
+        {
+          "text": "How does it feel in Arlington"
+        },
+        {
+          "text": "How does it feel like today?"
+        },
+        {
+          "text": "How does it feel like today in San Francisco?"
+        },
+        {
+          "text": "How does it feel like tomorrow?"
+        },
+        {
+          "text": "How hot does it feel in New Orleans"
+        },
+        {
+          "text": "How hot does it really feel in Arlington Texas"
+        },
+        {
+          "text": "Real feel conditions in Garland Texas"
+        },
+        {
+          "text": "Real feel for San Bernadino"
+        },
+        {
+          "text": "What did it feel like yesterday in Dallas?"
+        },
+        {
+          "text": "What does it feel like?"
+        },
+        {
+          "text": "What does it feel like in Tampa"
+        },
+        {
+          "text": "What will it feel like in Mesa this afternoon"
+        }
+      ]
+    },
+    {
+      "intent": "Humidity",
+      "examples": [
+        {
+          "text": "Can I expect dry weather in Portland tomorrow"
+        },
+        {
+          "text": "Do I need a humidifier today?"
+        },
+        {
+          "text": "How humid is it in Newark"
+        },
+        {
+          "text": "How wet will the air be in Kansas City this afternoon"
+        },
+        {
+          "text": "Humidity"
+        },
+        {
+          "text": "i'm really sweating because of the humidity"
+        },
+        {
+          "text": "Is it humid in Denver?"
+        },
+        {
+          "text": "Is the weather dry in Los Angeles?"
+        },
+        {
+          "text": "it is muggy today"
+        },
+        {
+          "text": "Was it humid in san Francisco"
+        },
+        {
+          "text": "what is the humidity in Poughkeepsie"
+        },
+        {
+          "text": "What’s the humidity like in Laredo"
+        },
+        {
+          "text": "Will it be dry in El Paso Texas on Thursday"
+        },
+        {
+          "text": "Will it be humid tomorrow in Seattle"
+        },
+        {
+          "text": "Will it be sticky in Baltimore Maryland tomorrow"
+        },
+        {
+          "text": "Will the air feel comfortable tomorrow"
+        }
+      ]
+    },
+    {
+      "intent": "ProvideLocation",
+      "examples": [
+        {
+          "text": "Berlin",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Denver",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Las Vegas",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "text": "London",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Los Angeles",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Madrid",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Miami",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "text": "New Delhi",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "text": "New York",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Paris",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "Location for weather inquiry"
+    },
+    {
+      "intent": "Rain",
+      "examples": [
+        {
+          "text": "Do I need an umbrella?"
+        },
+        {
+          "text": "do I need an umbrella in Tulsa Oklahoma"
+        },
+        {
+          "text": "Do I need a raincoat in Los Angeles?"
+        },
+        {
+          "text": "Do I need to water my garden?"
+        },
+        {
+          "text": "how rainy is it in Jacksonville Florida"
+        },
+        {
+          "text": "how rainy will it be in Irvine California this evening"
+        },
+        {
+          "text": "is it raining in El Monte California"
+        },
+        {
+          "text": "Is it raining in New York"
+        },
+        {
+          "text": "is there a chance of flooding?"
+        },
+        {
+          "text": "It’s starting to drizzle"
+        },
+        {
+          "text": "precipitation conditions for Mesa Arizona"
+        },
+        {
+          "text": "precipitation Montgomery Alabama"
+        },
+        {
+          "text": "rain in Beaumont Texas"
+        },
+        {
+          "text": "rain information in Independence Missouri"
+        },
+        {
+          "text": "should I bring an umbrella with me tomorrow in Glendale Arizona"
+        },
+        {
+          "text": "should I expect rainy conditions in Fort Wayne this afternoon"
+        },
+        {
+          "text": "should I wear rain boots in Omaha Nebraska"
+        },
+        {
+          "text": "the rain Ann Arbor Michigan"
+        },
+        {
+          "text": "what's the rain like in Seattle Washington"
+        },
+        {
+          "text": "what will the rain be like in Buffalo New York on Friday"
+        },
+        {
+          "text": "Will I need an umbrella in New York on today?"
+        },
+        {
+          "text": "will it rain in Riverside California on Thursday"
+        },
+        {
+          "text": "Will it rain tomorrow?"
+        }
+      ]
+    },
+    {
+      "intent": "SmallTalkGreeting",
+      "examples": [
+        {
+          "text": "Good afternoon"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "greetings"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "Hey Sonny"
+        },
+        {
+          "text": "hey what's up Sonny"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "hi how are you today"
+        },
+        {
+          "text": "Hi there"
+        },
+        {
+          "text": "how are you"
+        },
+        {
+          "text": "how are you sonny"
+        },
+        {
+          "text": "How do you do?"
+        },
+        {
+          "text": "howdy"
+        },
+        {
+          "text": "how's it going"
+        },
+        {
+          "text": "salutations"
+        }
+      ]
+    },
+    {
+      "intent": "Snow",
+      "examples": [
+        {
+          "text": "Can I go skiing today?"
+        },
+        {
+          "text": "Can I go snowboarding in Aurora Colorado"
+        },
+        {
+          "text": "Can I have a snowball fight this afternoon in Milwaukee"
+        },
+        {
+          "text": "Can I ski in Denver Colorado tomorrow"
+        },
+        {
+          "text": "Do I need snow boots today?"
+        },
+        {
+          "text": "Do I need snow tires today?"
+        },
+        {
+          "text": "How much snow is there"
+        },
+        {
+          "text": "How much snow should I expect in Buffalo New York"
+        },
+        {
+          "text": "Is it snowing"
+        },
+        {
+          "text": "Snowiness in Memphis"
+        },
+        {
+          "text": "Snow in Oklahoma City"
+        },
+        {
+          "text": "There are flurries"
+        },
+        {
+          "text": "will i need a shovel in denver tomorrow"
+        },
+        {
+          "text": "Will I need boots tomorrow"
+        },
+        {
+          "text": "Will it snow in Denver?"
+        },
+        {
+          "text": "Will it snow today?"
+        },
+        {
+          "text": "Will it snow tomorrow?"
+        }
+      ]
+    },
+    {
+      "intent": "Switch",
+      "examples": [
+        {
+          "text": "Baltimore"
+        },
+        {
+          "text": "Boston"
+        },
+        {
+          "text": "@city"
+        },
+        {
+          "text": "Cleveland"
+        },
+        {
+          "text": "Denver"
+        },
+        {
+          "text": "Florida"
+        },
+        {
+          "text": "How about in Dallas"
+        },
+        {
+          "text": "How about Miami"
+        },
+        {
+          "text": "I actually wanted tomorrow"
+        },
+        {
+          "text": "I meant today"
+        },
+        {
+          "text": "I'm interested in Oregon"
+        },
+        {
+          "text": "Now tell me about New York"
+        },
+        {
+          "text": "San Francisco"
+        },
+        {
+          "text": "Texas"
+        },
+        {
+          "text": "What about Boston"
+        },
+        {
+          "text": "What about in Austin"
+        }
+      ]
+    },
+    {
+      "intent": "Temperature",
+      "examples": [
+        {
+          "text": "Can I wear shorts today?"
+        },
+        {
+          "text": "do i need a coat"
+        },
+        {
+          "text": "do I need a jacket in Billings Montana"
+        },
+        {
+          "text": "do I need a jacket to go outside"
+        },
+        {
+          "text": "Do I need scarf and gloves?"
+        },
+        {
+          "text": "do i need to wear a coat"
+        },
+        {
+          "text": "heat in St. Louis on Friday"
+        },
+        {
+          "text": "how hot is it expected to be in Greensboro North Carolina on Wednesday"
+        },
+        {
+          "text": "How hot is it today?"
+        },
+        {
+          "text": "How hot was it in Topeka last night"
+        },
+        {
+          "text": "how should I dress in Springfield Illinois"
+        },
+        {
+          "text": "i don't need a sweater because it's mild"
+        },
+        {
+          "text": "Is it cold in Los Angeles?"
+        },
+        {
+          "text": "is it going to be cold this afternoon"
+        },
+        {
+          "text": "Is it hot in Denver?"
+        },
+        {
+          "text": "should I wear a jacket in Jersey City this evening"
+        },
+        {
+          "text": "should I wear a tee shirt in Honolulu"
+        },
+        {
+          "text": "temperature conditions for Jersey city on Saturday"
+        },
+        {
+          "text": "temperature information in Memphis"
+        },
+        {
+          "text": "temp in Los Angeles Thursday evening"
+        },
+        {
+          "text": "the temperature in El Paso"
+        },
+        {
+          "text": "Was it cold in Dallas last night"
+        },
+        {
+          "text": "what is the temperature in Poughkeepsie"
+        },
+        {
+          "text": "what'll the temp in Santa Ana be tomorrow"
+        },
+        {
+          "text": "What’s the temperature?"
+        },
+        {
+          "text": "What’s the temperature in Denver right now?"
+        },
+        {
+          "text": "what's the temperature in Washington D.C."
+        },
+        {
+          "text": "what will the temperature be in Orlando on Friday"
+        },
+        {
+          "text": "what will the temperature be in Pittsburgh this evening"
+        },
+        {
+          "text": "will it be cold in Toledo Ohio tomorrow"
+        }
+      ]
+    },
+    {
+      "intent": "Thank",
+      "examples": [
+        {
+          "text": "I appreciate it"
+        },
+        {
+          "text": "thanks a lot"
+        },
+        {
+          "text": "Thanks very much"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "Thank you, Sonny"
+        },
+        {
+          "text": "you're the best"
+        }
+      ]
+    },
+    {
+      "intent": "UV",
+      "examples": [
+        {
+          "text": "Do I need sun glasses today?"
+        },
+        {
+          "text": "Do I need sunscreen in New York?"
+        },
+        {
+          "text": "Do I need sun tan lotion in Los Angeles"
+        },
+        {
+          "text": "how intense will the sun be this afternoon in New York"
+        },
+        {
+          "text": "How sunny is it in Boston"
+        },
+        {
+          "text": "i need to stay in the shade because the uv index is high today"
+        },
+        {
+          "text": "Is it cloudy?"
+        },
+        {
+          "text": "Is it sunny in New York?"
+        },
+        {
+          "text": "Is the sun strong today?"
+        },
+        {
+          "text": "Should I be mindful of my skin in Mesa Arizona"
+        },
+        {
+          "text": "should I protect my skin in Providence Rhode Island"
+        },
+        {
+          "text": "should I wear sunscreen in Los Angeles this afternoon"
+        },
+        {
+          "text": "should I worry about sunburn today?"
+        },
+        {
+          "text": "Sun intensity in Albuquerque"
+        },
+        {
+          "text": "The sun was bright yesterday."
+        },
+        {
+          "text": "UV conditions in Mobile Arizona"
+        },
+        {
+          "text": "what is today's uv index in san Francisco"
+        },
+        {
+          "text": "What’s the UV level?"
+        },
+        {
+          "text": "Will it be sunny on Monday in Los Angeles?"
+        }
+      ]
+    },
+    {
+      "intent": "Weather",
+      "examples": [
+        {
+          "text": "can I go out and play on Friday in Oakland California",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                35,
+                53
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Can you tell me what the weather is going to be tomorrow?"
+        },
+        {
+          "text": "conditions in Miami Florida",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                14,
+                27
+              ]
+            }
+          ]
+        },
+        {
+          "text": "get the weather in Phoenix",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                19,
+                26
+              ]
+            }
+          ]
+        },
+        {
+          "text": "give me the forecast for New Orleans on Thursday",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                25,
+                36
+              ]
+            }
+          ]
+        },
+        {
+          "text": "how is it in California",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                13,
+                23
+              ]
+            }
+          ]
+        },
+        {
+          "text": "should I expect some nice weather in Saint Paul Minnesota next Tuesday",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                37,
+                57
+              ]
+            }
+          ]
+        },
+        {
+          "text": "the weather in Chicago",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                15,
+                22
+              ]
+            }
+          ]
+        },
+        {
+          "text": "weather conditions in San Antonio Texas",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                22,
+                39
+              ]
+            }
+          ]
+        },
+        {
+          "text": "weather information in Houston Texas",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                23,
+                36
+              ]
+            }
+          ]
+        },
+        {
+          "text": "what are the expected conditions for Sacramento on Tuesday",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                37,
+                47
+              ]
+            }
+          ]
+        },
+        {
+          "text": "what is the weather"
+        },
+        {
+          "text": "What is tomorrow’s forecast?"
+        },
+        {
+          "text": "What should I wear today?"
+        },
+        {
+          "text": "what's it like in Columbus",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                18,
+                26
+              ]
+            }
+          ]
+        },
+        {
+          "text": "What’s it like outside?"
+        },
+        {
+          "text": "what's the expected forecast for Long Beach California tomorrow",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                33,
+                54
+              ]
+            }
+          ]
+        },
+        {
+          "text": "what's the forecast for san francisco on Saturday",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                24,
+                37
+              ]
+            }
+          ]
+        },
+        {
+          "text": "What’s the weather in New York?",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                22,
+                30
+              ]
+            }
+          ]
+        },
+        {
+          "text": "What’s the weather in San Francisco tomorrow?",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                22,
+                35
+              ]
+            }
+          ]
+        },
+        {
+          "text": "what's the weather in San Jose California",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                22,
+                41
+              ]
+            }
+          ]
+        },
+        {
+          "text": "What’s the weather today?"
+        },
+        {
+          "text": "What’s the weather tomorrow?"
+        },
+        {
+          "text": "what will the weather be in Atlanta tomorrow",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                28,
+                35
+              ]
+            }
+          ]
+        },
+        {
+          "text": "what will the weather be in Raleigh North Carolina on Friday",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                28,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "text": "will I enjoy the outdoors in Plano Texas this evening",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                29,
+                34
+              ]
+            },
+            {
+              "entity": "location",
+              "location": [
+                35,
+                40
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Will we have good weather?"
+        }
+      ]
+    },
+    {
+      "intent": "Wind",
+      "examples": [
+        {
+          "text": "Can I expect gusts of wind this afternoon in Las Vegas Nevada"
+        },
+        {
+          "text": "how fast is the wind blowing"
+        },
+        {
+          "text": "How strong is the wind?"
+        },
+        {
+          "text": "How windy is it"
+        },
+        {
+          "text": "How windy is it today?"
+        },
+        {
+          "text": "How windy will it be"
+        },
+        {
+          "text": "is it windy in Chicago"
+        },
+        {
+          "text": "Is it windy in Denver?"
+        },
+        {
+          "text": "Is it windy in Los Angeles?"
+        },
+        {
+          "text": "it is windy"
+        },
+        {
+          "text": "What are the wind conditions like"
+        },
+        {
+          "text": "what is the wind speed"
+        },
+        {
+          "text": "Will it be windy tomorrow?"
+        },
+        {
+          "text": "Wind"
+        },
+        {
+          "text": "Windiness for Portland Maine"
+        },
+        {
+          "text": "Wind in Nashville"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "location",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Antonio",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Atlanta",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Berlin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "California",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chicago",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Columbus",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Denver",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Houston Texas",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Las Vegas",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "London",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Long Beach California",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Los Angeles",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Madrid",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Miami",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Miami Florida",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "New Delhi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "New Orleans",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "New York",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Oakland California",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Paris",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Phoenix",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Plano",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Raleigh North Carolina",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sacramento",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Saint Paul Minnesota",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "San",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "San Antonio Texas",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "san francisco",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "San Jose California",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Texas",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "runtime_version": "2016-09-20"
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Ask Abilities",
+      "output": {
+        "text": "I can answer your weather questions about most cities in the United States. I can also look up the forecast for specific days in the future."
+      },
+      "conditions": "#AskAbilities",
+      "dialog_node": "Ask Abilities",
+      "previous_sibling": "Ask Name"
+    },
+    {
+      "type": "standard",
+      "title": "Asked State",
+      "output": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "State Provided"
+      },
+      "conditions": "$asked_state",
+      "dialog_node": "Asked State"
+    },
+    {
+      "type": "standard",
+      "title": "Ask Name",
+      "output": {
+        "text": "My designation is Sonny. I am a Cognitive Weather Bot."
+      },
+      "conditions": "#AskWho",
+      "dialog_node": "Ask Name",
+      "previous_sibling": "Greeting"
+    },
+    {
+      "type": "standard",
+      "title": "City Present - Continue",
+      "output": {},
+      "parent": "New State",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "Get Weather if Location Present"
+      },
+      "conditions": "true",
+      "dialog_node": "City Present - Continue",
+      "previous_sibling": "Clear City if Absent"
+    },
+    {
+      "type": "standard",
+      "title": "Clear City if Absent",
+      "output": {},
+      "parent": "New State",
+      "context": {
+        "city": null
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "Get Weather if Location Present"
+      },
+      "conditions": "!($asked_state) && !(input.new.city)",
+      "dialog_node": "Clear City if Absent"
+    },
+    {
+      "type": "standard",
+      "title": "Clear State If City Switched",
+      "output": {},
+      "parent": "New City",
+      "context": {
+        "state": ""
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Set Context City"
+      },
+      "conditions": "$city && $city != input.new.city && $state && !($asked_city)",
+      "dialog_node": "Clear State If City Switched"
+    },
+    {
+      "type": "standard",
+      "title": "Else",
+      "output": {},
+      "parent": "Asked State",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "Weather Condition Query"
+      },
+      "conditions": "true",
+      "dialog_node": "Else",
+      "previous_sibling": "User Cancels"
+    },
+    {
+      "type": "standard",
+      "title": "Get Weather if Location Present",
+      "output": {
+        "action": "get_weather"
+      },
+      "parent": "Weather Condition Query",
+      "context": {
+        "options": null,
+        "asked_city": false,
+        "asked_state": false
+      },
+      "conditions": "$city || $state",
+      "dialog_node": "Get Weather if Location Present",
+      "previous_sibling": "New State"
+    },
+    {
+      "type": "standard",
+      "title": "Greeting",
+      "output": {
+        "text": {
+          "values": [
+            "Hello, my name is Sonny. Ask me a question about the weather!"
+          ]
+        }
+      },
+      "conditions": "conversation_start || #SmallTalkGreeting",
+      "dialog_node": "Greeting",
+      "previous_sibling": "Switch Context"
+    },
+    {
+      "type": "standard",
+      "title": "New City",
+      "output": {},
+      "parent": "Weather Condition Query",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "Clear State If City Switched"
+      },
+      "conditions": "input.new.city",
+      "dialog_node": "New City"
+    },
+    {
+      "type": "standard",
+      "title": "New State",
+      "output": {},
+      "parent": "Weather Condition Query",
+      "context": {
+        "state": "<? input.new.state ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "Clear City if Absent"
+      },
+      "conditions": "input.new.state",
+      "dialog_node": "New State",
+      "previous_sibling": "New City"
+    },
+    {
+      "type": "standard",
+      "title": "Location Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, looking at $city"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Weather Condition Query",
+      "context": {
+        "city": "@location"
+      },
+      "conditions": "@location",
+      "dialog_node": "node_4_1604893749557",
+      "previous_sibling": "Get Weather if Location Present"
+    },
+    {
+      "type": "standard",
+      "title": "Location Provided",
+      "output": {
+        "generic": []
+      },
+      "parent": "No Location Present",
+      "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_4_1604893749557"
+      },
+      "conditions": "@location",
+      "dialog_node": "node_9_1604893222236"
+    },
+    {
+      "type": "standard",
+      "title": "No Location Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I'm sorry, I did not understand the location."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "No Location Present",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "No Location Present"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_9_1604893305524",
+      "previous_sibling": "node_9_1604893222236"
+    },
+    {
+      "type": "standard",
+      "title": "No Intent Found",
+      "output": {
+        "text": "Sorry, I can only answer questions about the weather."
+      },
+      "conditions": "anything_else",
+      "dialog_node": "No Intent Found",
+      "previous_sibling": "Thank"
+    },
+    {
+      "type": "standard",
+      "title": "No Location Present",
+      "output": {
+        "text": "Which city would you like weather information for?"
+      },
+      "parent": "Weather Condition Query",
+      "conditions": "true",
+      "dialog_node": "No Location Present",
+      "previous_sibling": "node_4_1604893749557"
+    },
+    {
+      "type": "standard",
+      "title": "Set Context City",
+      "output": {},
+      "parent": "New City",
+      "context": {
+        "city": "<? input.new.city ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "New State"
+      },
+      "conditions": "true",
+      "dialog_node": "Set Context City",
+      "previous_sibling": "Clear State If City Switched"
+    },
+    {
+      "type": "standard",
+      "title": "State Provided",
+      "output": {},
+      "parent": "Asked State",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "New State"
+      },
+      "conditions": "input.new.state",
+      "dialog_node": "State Provided"
+    },
+    {
+      "type": "standard",
+      "title": "Switch Context",
+      "output": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "New City"
+      },
+      "conditions": "#Switch || input.new.city",
+      "dialog_node": "Switch Context",
+      "previous_sibling": "Weather Condition Query"
+    },
+    {
+      "type": "standard",
+      "title": "Thank",
+      "output": {
+        "text": "You're most welcome!"
+      },
+      "conditions": "#Thank",
+      "dialog_node": "Thank",
+      "previous_sibling": "Ask Abilities"
+    },
+    {
+      "type": "standard",
+      "title": "User Cancels",
+      "output": {
+        "text": {
+          "values": [
+            "Okay, canceling this request."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "Asked State",
+      "context": {
+        "asked_state": false
+      },
+      "conditions": "#Cancel",
+      "dialog_node": "User Cancels",
+      "previous_sibling": "State Provided"
+    },
+    {
+      "type": "standard",
+      "title": "Weather Condition Query",
+      "output": {},
+      "context": {
+        "condition": "<? intents[0].intent ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_4_1604893749557"
+      },
+      "conditions": "#Weather || #Temperature || #Rain || #Humidity || #UV || #Wind || #FeelsLike || #Snow",
+      "dialog_node": "Weather Condition Query",
+      "previous_sibling": "Asked State"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Sonny - Cognitive Weather Bot",
+  "language": "en",
+  "description": "Weather virtual agent"
+}
