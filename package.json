@@ -17,7 +17,9 @@
   "author": "IBM Corp.",
   "dependencies": {
     "babel-eslint": "^10.1.0",
-    "hello-watson": "^0.10.7"
+    "dotenv": "^8.2.0",
+    "hello-watson": "^0.10.7",
+    "superagent": "^6.1.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
