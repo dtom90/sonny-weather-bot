@@ -4,7 +4,8 @@ const app = new AssistantApp({
   target: document.body,
   props: {
     title: 'Sonny Weather Bot',
-    titleColor: 'blue'
+    titleColor: 'blue',
+    debugCheckbox: true
   }
 });
 
