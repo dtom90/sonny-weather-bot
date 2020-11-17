@@ -3,10 +3,10 @@ const {assistantServer, handler} = require('hello-watson');
 const PORT = 3000;
 
 const postProcess = (result) => {
-  if (result.output.intents.length > 0) {
-    result.output.generic.unshift({
+  if (result.context.skills['main skill'].user_defined) {
+    result.output.generic.push({
       response_type: 'text',
-      text: result.output.intents[0].intent
+      text: Object.entries(result.context.skills['main skill'].user_defined).map(([k, v]) => k + ': ' + v).join(', ')
     });
   }
 };
