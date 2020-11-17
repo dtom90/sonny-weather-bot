@@ -1921,10 +1921,10 @@ has@^1.0.0, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hello-watson@^0.10.8:
-  version "0.10.8"
-  resolved "https://registry.yarnpkg.com/hello-watson/-/hello-watson-0.10.8.tgz#e60f37086f36f37f169fa341b87bb71f16640dd3"
-  integrity sha512-ryZa2oi5XP7MG9liWgyItXYQqAvtUgm65PsiS6x2nS0A+3cxArwjv/u5Vmd3qXYJPZFT7GkyquWHD6wx4qzC7w==
+hello-watson@^0.10.9:
+  version "0.10.9"
+  resolved "https://registry.yarnpkg.com/hello-watson/-/hello-watson-0.10.9.tgz#d70f0a234cf579c2c23b1b921e2c82e2497ca782"
+  integrity sha512-Ixdf6JoechhcSB3vgwvwjNKadO3ostXljt6K1gp16C4Szaiug46Q2kcU007k5uMJ0dhcrVGrs6SscxHEjcrt/w==
   dependencies:
     "@polka/send-type" "^0.5.2"
     babel-eslint "^10.1.0"
