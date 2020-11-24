@@ -191,7 +191,7 @@
           "text": "Berlin",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 6
@@ -203,7 +203,7 @@
           "text": "Denver",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 6
@@ -215,7 +215,7 @@
           "text": "Las Vegas",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 9
@@ -227,7 +227,7 @@
           "text": "London",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 6
@@ -239,7 +239,7 @@
           "text": "Los Angeles",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 11
@@ -251,7 +251,7 @@
           "text": "Madrid",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 6
@@ -263,7 +263,7 @@
           "text": "Miami",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 5
@@ -275,7 +275,7 @@
           "text": "New Delhi",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 9
@@ -287,7 +287,7 @@
           "text": "New York",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 8
@@ -299,7 +299,7 @@
           "text": "Paris",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 0,
                 5
@@ -317,25 +317,70 @@
           "text": "Do I need an umbrella?"
         },
         {
-          "text": "do I need an umbrella in Tulsa Oklahoma"
+          "text": "do I need an umbrella in Tulsa Oklahoma",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                25,
+                30
+              ]
+            }
+          ]
         },
         {
-          "text": "Do I need a raincoat in Los Angeles?"
+          "text": "Do I need a raincoat in Los Angeles?",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                24,
+                35
+              ]
+            }
+          ]
         },
         {
           "text": "Do I need to water my garden?"
         },
         {
-          "text": "how rainy is it in Jacksonville Florida"
+          "text": "how rainy is it in Jacksonville Florida",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                19,
+                31
+              ]
+            }
+          ]
         },
         {
-          "text": "how rainy will it be in Irvine California this evening"
+          "text": "how rainy will it be in Irvine California this evening",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                24,
+                30
+              ]
+            }
+          ]
         },
         {
           "text": "is it raining in El Monte California"
         },
         {
-          "text": "Is it raining in New York"
+          "text": "Is it raining in New York",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                17,
+                25
+              ]
+            }
+          ]
         },
         {
           "text": "is there a chance of flooding?"
@@ -512,10 +557,28 @@
           "text": "Florida"
         },
         {
-          "text": "How about in Dallas"
+          "text": "How about in Dallas",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                13,
+                19
+              ]
+            }
+          ]
         },
         {
-          "text": "How about Miami"
+          "text": "How about Miami",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                10,
+                15
+              ]
+            }
+          ]
         },
         {
           "text": "I actually wanted tomorrow"
@@ -524,22 +587,76 @@
           "text": "I meant today"
         },
         {
-          "text": "I'm interested in Oregon"
+          "text": "I'm interested in Oregon",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                18,
+                24
+              ]
+            }
+          ]
         },
         {
-          "text": "Now tell me about New York"
+          "text": "Now tell me about New York",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                18,
+                26
+              ]
+            }
+          ]
         },
         {
-          "text": "San Francisco"
+          "text": "San Francisco",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                0,
+                13
+              ]
+            }
+          ]
         },
         {
-          "text": "Texas"
+          "text": "Texas",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                0,
+                5
+              ]
+            }
+          ]
         },
         {
-          "text": "What about Boston"
+          "text": "What about Boston",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                11,
+                17
+              ]
+            }
+          ]
         },
         {
-          "text": "What about in Austin"
+          "text": "What about in Austin",
+          "mentions": [
+            {
+              "entity": "city",
+              "location": [
+                14,
+                20
+              ]
+            }
+          ]
         }
       ]
     },
@@ -730,7 +847,7 @@
           "text": "can I go out and play on Friday in Oakland California",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 35,
                 53
@@ -745,7 +862,7 @@
           "text": "conditions in Miami Florida",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 14,
                 27
@@ -757,7 +874,7 @@
           "text": "get the weather in Phoenix",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 19,
                 26
@@ -769,7 +886,7 @@
           "text": "give me the forecast for New Orleans on Thursday",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 25,
                 36
@@ -781,7 +898,7 @@
           "text": "how is it in California",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 13,
                 23
@@ -793,7 +910,7 @@
           "text": "should I expect some nice weather in Saint Paul Minnesota next Tuesday",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 37,
                 57
@@ -805,7 +922,7 @@
           "text": "the weather in Chicago",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 15,
                 22
@@ -817,7 +934,7 @@
           "text": "weather conditions in San Antonio Texas",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 22,
                 39
@@ -829,7 +946,7 @@
           "text": "weather information in Houston Texas",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 23,
                 36
@@ -841,7 +958,7 @@
           "text": "what are the expected conditions for Sacramento on Tuesday",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 37,
                 47
@@ -862,7 +979,7 @@
           "text": "what's it like in Columbus",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 18,
                 26
@@ -877,7 +994,7 @@
           "text": "what's the expected forecast for Long Beach California tomorrow",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 33,
                 54
@@ -889,7 +1006,7 @@
           "text": "what's the forecast for san francisco on Saturday",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 24,
                 37
@@ -901,7 +1018,7 @@
           "text": "What’s the weather in New York?",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 22,
                 30
@@ -913,7 +1030,7 @@
           "text": "What’s the weather in San Francisco tomorrow?",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 22,
                 35
@@ -925,7 +1042,7 @@
           "text": "what's the weather in San Jose California",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 22,
                 41
@@ -943,7 +1060,7 @@
           "text": "what will the weather be in Atlanta tomorrow",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 28,
                 35
@@ -955,7 +1072,7 @@
           "text": "what will the weather be in Raleigh North Carolina on Friday",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 28,
                 50
@@ -967,14 +1084,14 @@
           "text": "will I enjoy the outdoors in Plano Texas this evening",
           "mentions": [
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 29,
                 34
               ]
             },
             {
-              "entity": "location",
+              "entity": "city",
               "location": [
                 35,
                 40
@@ -1043,7 +1160,7 @@
   ],
   "entities": [
     {
-      "entity": "location",
+      "entity": "city",
       "values": [
         {
           "type": "synonyms",
@@ -1057,7 +1174,17 @@
         },
         {
           "type": "synonyms",
+          "value": "Austin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
           "value": "Berlin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Boston",
           "synonyms": []
         },
         {
@@ -1077,12 +1204,27 @@
         },
         {
           "type": "synonyms",
+          "value": "Dallas",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
           "value": "Denver",
           "synonyms": []
         },
         {
           "type": "synonyms",
           "value": "Houston Texas",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Irvine",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Jacksonville",
           "synonyms": []
         },
         {
@@ -1142,6 +1284,11 @@
         },
         {
           "type": "synonyms",
+          "value": "Oregon",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
           "value": "Paris",
           "synonyms": []
         },
@@ -1194,6 +1341,11 @@
           "type": "synonyms",
           "value": "Texas",
           "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tulsa",
+          "synonyms": []
         }
       ],
       "fuzzy_match": true
@@ -1223,18 +1375,6 @@
     },
     {
       "type": "standard",
-      "title": "Asked State",
-      "output": {},
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "condition",
-        "dialog_node": "State Provided"
-      },
-      "conditions": "$asked_state",
-      "dialog_node": "Asked State"
-    },
-    {
-      "type": "standard",
       "title": "Ask Name",
       "output": {
         "text": "My designation is Sonny. I am a Cognitive Weather Bot."
@@ -1242,82 +1382,6 @@
       "conditions": "#AskWho",
       "dialog_node": "Ask Name",
       "previous_sibling": "Greeting"
-    },
-    {
-      "type": "standard",
-      "title": "City Present - Continue",
-      "output": {},
-      "parent": "New State",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "condition",
-        "dialog_node": "Get Weather if Location Present"
-      },
-      "conditions": "true",
-      "dialog_node": "City Present - Continue",
-      "previous_sibling": "Clear City if Absent"
-    },
-    {
-      "type": "standard",
-      "title": "Clear City if Absent",
-      "output": {},
-      "parent": "New State",
-      "context": {
-        "city": null
-      },
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "condition",
-        "dialog_node": "Get Weather if Location Present"
-      },
-      "conditions": "!($asked_state) && !(input.new.city)",
-      "dialog_node": "Clear City if Absent"
-    },
-    {
-      "type": "standard",
-      "title": "Clear State If City Switched",
-      "output": {},
-      "parent": "New City",
-      "context": {
-        "state": ""
-      },
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "Set Context City"
-      },
-      "conditions": "$city && $city != input.new.city && $state && !($asked_city)",
-      "dialog_node": "Clear State If City Switched"
-    },
-    {
-      "type": "standard",
-      "title": "Else",
-      "output": {},
-      "parent": "Asked State",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "condition",
-        "dialog_node": "Weather Condition Query"
-      },
-      "conditions": "true",
-      "dialog_node": "Else",
-      "previous_sibling": "User Cancels"
-    },
-    {
-      "type": "standard",
-      "title": "Get Weather if Location Present",
-      "output": {
-        "action": "get_weather"
-      },
-      "parent": "Weather Condition Query",
-      "context": {
-        "options": null,
-        "asked_city": false,
-        "asked_state": false
-      },
-      "conditions": "$city || $state",
-      "dialog_node": "Get Weather if Location Present",
-      "previous_sibling": "New State"
     },
     {
       "type": "standard",
@@ -1335,57 +1399,21 @@
     },
     {
       "type": "standard",
-      "title": "New City",
-      "output": {},
-      "parent": "Weather Condition Query",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "condition",
-        "dialog_node": "Clear State If City Switched"
-      },
-      "conditions": "input.new.city",
-      "dialog_node": "New City"
-    },
-    {
-      "type": "standard",
-      "title": "New State",
-      "output": {},
-      "parent": "Weather Condition Query",
-      "context": {
-        "state": "<? input.new.state ?>"
-      },
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "condition",
-        "dialog_node": "Clear City if Absent"
-      },
-      "conditions": "input.new.state",
-      "dialog_node": "New State",
-      "previous_sibling": "New City"
-    },
-    {
-      "type": "standard",
       "title": "Location Provided",
       "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Ok, looking at $city"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
+        "generic": []
       },
       "parent": "Weather Condition Query",
       "context": {
-        "city": "@location"
+        "city": "@city"
       },
-      "conditions": "@location",
-      "dialog_node": "node_4_1604893749557",
-      "previous_sibling": "Get Weather if Location Present"
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_9_1606193083599"
+      },
+      "conditions": "@city",
+      "dialog_node": "node_4_1604893749557"
     },
     {
       "type": "standard",
@@ -1400,7 +1428,7 @@
         "selector": "condition",
         "dialog_node": "node_4_1604893749557"
       },
-      "conditions": "@location",
+      "conditions": "@city",
       "dialog_node": "node_9_1604893222236"
     },
     {
@@ -1431,6 +1459,27 @@
     },
     {
       "type": "standard",
+      "title": "Location in Context",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, looking at $condition in $city..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Weather Condition Query",
+      "conditions": "$city && $condition",
+      "dialog_node": "node_9_1606193083599",
+      "previous_sibling": "node_4_1604893749557"
+    },
+    {
+      "type": "standard",
       "title": "No Intent Found",
       "output": {
         "text": "Sorry, I can only answer questions about the weather."
@@ -1443,53 +1492,35 @@
       "type": "standard",
       "title": "No Location Present",
       "output": {
-        "text": "Which city would you like weather information for?"
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which city would you like $condition information for?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
       },
       "parent": "Weather Condition Query",
       "conditions": "true",
       "dialog_node": "No Location Present",
-      "previous_sibling": "node_4_1604893749557"
-    },
-    {
-      "type": "standard",
-      "title": "Set Context City",
-      "output": {},
-      "parent": "New City",
-      "context": {
-        "city": "<? input.new.city ?>"
-      },
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "condition",
-        "dialog_node": "New State"
-      },
-      "conditions": "true",
-      "dialog_node": "Set Context City",
-      "previous_sibling": "Clear State If City Switched"
-    },
-    {
-      "type": "standard",
-      "title": "State Provided",
-      "output": {},
-      "parent": "Asked State",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "New State"
-      },
-      "conditions": "input.new.state",
-      "dialog_node": "State Provided"
+      "previous_sibling": "node_9_1606193083599"
     },
     {
       "type": "standard",
       "title": "Switch Context",
-      "output": {},
+      "output": {
+        "generic": []
+      },
       "next_step": {
         "behavior": "jump_to",
         "selector": "condition",
-        "dialog_node": "New City"
+        "dialog_node": "node_4_1604893749557"
       },
-      "conditions": "#Switch || input.new.city",
+      "conditions": "#Switch",
       "dialog_node": "Switch Context",
       "previous_sibling": "Weather Condition Query"
     },
@@ -1505,38 +1536,16 @@
     },
     {
       "type": "standard",
-      "title": "User Cancels",
-      "output": {
-        "text": {
-          "values": [
-            "Okay, canceling this request."
-          ],
-          "selection_policy": "sequential"
-        }
-      },
-      "parent": "Asked State",
-      "context": {
-        "asked_state": false
-      },
-      "conditions": "#Cancel",
-      "dialog_node": "User Cancels",
-      "previous_sibling": "State Provided"
-    },
-    {
-      "type": "standard",
       "title": "Weather Condition Query",
       "output": {},
       "context": {
         "condition": "<? intents[0].intent ?>"
       },
       "next_step": {
-        "behavior": "jump_to",
-        "selector": "condition",
-        "dialog_node": "node_4_1604893749557"
+        "behavior": "skip_user_input"
       },
       "conditions": "#Weather || #Temperature || #Rain || #Humidity || #UV || #Wind || #FeelsLike || #Snow",
-      "dialog_node": "Weather Condition Query",
-      "previous_sibling": "Asked State"
+      "dialog_node": "Weather Condition Query"
     }
   ],
   "counterexamples": [],
