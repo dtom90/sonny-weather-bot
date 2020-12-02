@@ -1555,7 +1555,7 @@
     },
     "disambiguation": {
       "prompt": "Did you mean:",
-      "enabled": true,
+      "enabled": false,
       "randomize": true,
       "max_suggestions": 5,
       "suggestion_text_policy": "title",
@@ -1566,6 +1566,9 @@
     },
     "human_agent_assist": {
       "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
     },
     "spelling_auto_correct": true
   },
