@@ -18,7 +18,7 @@
   "dependencies": {
     "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
-    "hello-watson": "^0.10.11",
+    "hello-watson": "^0.10.12",
     "superagent": "^6.1.0"
   },
   "devDependencies": {
