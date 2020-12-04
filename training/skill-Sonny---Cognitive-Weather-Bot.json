@@ -1399,6 +1399,20 @@
     },
     {
       "type": "standard",
+      "parent": "Switch Context",
+      "context": {
+        "condition": "Weather"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_5_1607044843999"
+      },
+      "conditions": "$condition == null",
+      "dialog_node": "node_3_1607044555543"
+    },
+    {
+      "type": "standard",
       "title": "Location Provided",
       "output": {
         "generic": []
@@ -1414,6 +1428,22 @@
       },
       "conditions": "@city",
       "dialog_node": "node_4_1604893749557"
+    },
+    {
+      "type": "standard",
+      "title": "Check location",
+      "output": {
+        "generic": []
+      },
+      "parent": "Switch Context",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_4_1604893749557"
+      },
+      "conditions": "true",
+      "dialog_node": "node_5_1607044843999",
+      "previous_sibling": "node_3_1607044555543"
     },
     {
       "type": "standard",
@@ -1505,7 +1535,7 @@
         ]
       },
       "parent": "Weather Condition Query",
-      "conditions": "true",
+      "conditions": "$condition",
       "dialog_node": "No Location Present",
       "previous_sibling": "node_9_1606193083599"
     },
@@ -1516,11 +1546,9 @@
         "generic": []
       },
       "next_step": {
-        "behavior": "jump_to",
-        "selector": "condition",
-        "dialog_node": "node_4_1604893749557"
+        "behavior": "skip_user_input"
       },
-      "conditions": "#Switch",
+      "conditions": "@city",
       "dialog_node": "Switch Context",
       "previous_sibling": "Weather Condition Query"
     },
