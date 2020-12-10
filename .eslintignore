@@ -1,11 +1,3 @@
 public/build/
 node_modules/
-speech/
 training_data/
-ui/ibm/
-ui_config/
-/*.js
-ui/js/libs
-ui/js/conversation.js
-/ui/js/bootstrap.min.js
-/ui/js/dropdowns-enhancement.js
