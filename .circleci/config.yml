@@ -7,5 +7,5 @@ workflows:
   node-tests:
     jobs:
       - node/test:
-          version: 14.13.0
+          version: 14.15.1
           pkg-manager: yarn

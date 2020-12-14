@@ -1,7 +1,7 @@
 const {assistantServer, handler} = require('hello-watson');
 const {getWeather, composeResponse} = require('./lib/openWeatherClient');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const postProcess = async (result) => {
   const context = result.context.skills['main skill'].user_defined;

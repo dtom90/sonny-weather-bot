@@ -1,22 +1,7 @@
 ---
-declared-services:
-  watson-conversation:
-    label: conversation
-    plan: free
-  speech-to-text:
-    label: speech_to_text
-    plan: standard
-  text-to-speech:
-    label: text_to_speech
-    plan: standard
 applications:
-- name: Sonny
-  memory: 128m
+- name: SonnyBot
+  memory: 64m
+  buildpacks:
+    - https://github.com/cloudfoundry/nodejs-buildpack.git#v1.7.37
   command: npm start
-  services:
-  - speech-to-text
-  - text-to-speech
-  - watson-conversation
-  env:
-    APP_NAME: Sonny
-    DESCRIPTION: "Weather Bot - Powered by Watson"
